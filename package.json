@@ -1,0 +1,31 @@
+{
+  "name": "dontdieonmewebapp",
+  "version": "1.0.0",
+  "description": "final project full stack webdevelopment program NYCDA",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marijkevanderveer/dontdieonmeWebApp.git"
+  },
+  "keywords": [
+    "plants"
+  ],
+  "author": "maatje van der veer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marijkevanderveer/dontdieonmeWebApp/issues"
+  },
+  "homepage": "https://github.com/marijkevanderveer/dontdieonmeWebApp#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "express-session": "^1.15.1",
+    "pg": "^6.1.4",
+    "pug": "^2.0.0-beta11",
+    "sequelize": "^3.30.2"
+  }
+}
