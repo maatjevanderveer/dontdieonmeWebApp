@@ -1,0 +1,19 @@
+body {
+	background-color: $background-color;
+	color: $primary-color;
+	font-family: $p-font-family;
+}
+
+p {
+	font-family: $p-font-family;
+}
+
+h1 {
+	font-family: $title-font-family;
+	text-align: center;
+}
+
+h2, h3, h4, h5 {
+	font-family: $heading-font-family;
+	text-align: center;
+}
