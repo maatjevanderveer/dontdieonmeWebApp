@@ -5909,8 +5909,8 @@ h2, h3, h4, h5 {
 
 section.container.howdoesitwork {
   background: #ffffff;
-  padding-top: 250px;
-  padding-bottom: 250px; }
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 .container.aboutus {
   background: gray;
@@ -5929,7 +5929,7 @@ section.container.howdoesitwork {
 
 .container.text-center.contact h1 {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 32px;
   text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
   padding-top: 50px;
   padding-bottom: 50px;
