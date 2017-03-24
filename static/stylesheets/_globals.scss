@@ -1,0 +1,175 @@
+body {
+	// background-color: $background-color;
+	color: $primary-color;
+	font-family: $p-font-family;
+}
+
+p {
+	font-family: $p-font-family;
+}
+
+h1 {
+	font-family: $title-font-family;
+	text-align: center;
+}
+
+h2, h3, h4, h5 {
+	font-family: $heading-font-family;
+	text-align: center;
+}
+
+.full.img-1 {
+	background: url(../img/bg_1.jpeg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.full.img-2 {
+	background: url(../img/bg_2.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+// NAVBAR
+.navbar-default {
+	background-color: $whitish;
+	border-color: transparent;
+	border-radius:0;
+	padding-top:20px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: $logo-green;
+	background-color:transparent;
+}
+
+.navbar-default .navbar-nav>li>a {     // style the links in the list
+	color: #000;
+	font-size:14px;
+	font-weight:600;
+	text-transform:uppercase;
+}
+
+.navbar-default .navbar-nav li a :hover{ // style links in list when mouse hovers over them
+	color: complement($logo-green);
+}
+
+.navbar-default .collapse .login a{ 
+	color: #82ca9c;
+	border: 1px solid #82ca9c;
+	border-radius: 20px;
+	padding: 4px 30px;
+	font-size: 12px;
+	margin-top: 10px;
+	margin-left: 30px;
+	display:inline-block;
+	overflow:hidden;
+}
+
+.navbar-default .collapse .login:hover a{
+	background-color: rgba(0, 173, 62, 0.75);
+	color:#fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
+	color: complement($logo-green);
+	background-color: transparent;
+}
+
+.navbar-toggle{
+	border: none;
+}
+
+.navbar-brand{
+	margin-top:-15px; 
+	a {
+		font-family: $title-font-family;
+		color: $whitish;
+	}
+	img{
+		display: inline-block;
+		width: 5%;
+  	}
+}
+
+// CONTAINER
+
+.container.text-center.title {
+		h1 {
+			color: $whitish;
+			font-size: 75px;
+			text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
+			padding-top: 250px;
+			padding-bottom: 250px;
+			border-color: $border-color;
+			margin: 10px;
+		}
+}
+
+.container.text-center.contact {
+		h1 {
+			color: $whitish;
+			font-size: 40px;
+			text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
+			padding-top: 50px;
+			padding-bottom: 50px;
+			border-color: $border-color;
+			border: 5px;
+			margin: 10px;
+		}
+}
+
+.container.homepage {
+	background: mix(black, white, 50%);
+	background: rgba($whitish, 0.8);
+	padding: 50px;
+	h2 {
+		color: darken($primary-color, 10%);
+	}
+	a {
+		color: darken($primary-color, 10%);
+		font-family: $heading-font-family;
+		font-size: 20px;
+	}
+	a:hover {
+		color: $primary-color;
+	}
+}
+
+section.container.howdoesitwork {
+	background: $whitish;
+	padding-top: 250px;
+	padding-bottom: 250px;
+}
+
+.container.aboutus {
+	background: mix(black, white, 50%);
+	background: rgba($whitish, 0.8);
+	padding: 50px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	h2 {
+		color: darken($primary-color, 10%);
+	}
+	a {
+		color: darken($primary-color, 10%);
+		font-family: $heading-font-family;
+		font-size: 20px;
+	}
+	a:hover {
+		color: $primary-color;
+	}
+}
+
+// FOOTER
+
+footer.footer {
+	background-color: $whitish;
+	ul{
+		list-style-type: none;
+	}
+}
