@@ -31,3 +31,9 @@ app.get('/', function (request, response){
 app.listen(3000, () => {
     console.log('the server is running on localhost:3000')
 });
+
+app.get('/form', function (request, response) {
+	response.render('form')
+});
+
+// app.post()

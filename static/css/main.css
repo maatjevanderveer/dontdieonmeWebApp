@@ -5822,7 +5822,7 @@ h2, h3, h4, h5 {
   text-align: center; }
 
 .full.img-1 {
-  background: url(../img/bg_1.jpeg) no-repeat center center fixed;
+  background: url(../img/bg_3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5889,8 +5889,8 @@ h2, h3, h4, h5 {
   color: #ffffff;
   font-size: 75px;
   text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
-  padding-top: 250px;
-  padding-bottom: 250px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   border-color: #1e1e2e;
   margin: 10px; }
 
