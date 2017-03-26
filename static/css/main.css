@@ -3956,9 +3956,9 @@ tbody.collapse.in {
   background-color: #f8f8f8;
   border-color: #e7e7e7; }
   .navbar-default .navbar-brand {
-    color: #777; }
+    color: white; }
     .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
-      color: #5e5e5e;
+      color: #d95678;
       background-color: transparent; }
   .navbar-default .navbar-text {
     color: #777; }
@@ -5836,13 +5836,13 @@ h2, h3, h4, h5 {
   background-size: cover; }
 
 .navbar-default {
-  background-color: #ffffff;
+  background-color: rgba(71, 71, 107, 0.6);
   border-color: transparent;
   border-radius: 0;
   padding-top: 20px; }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #56d9b7;
+  color: #ffffff;
   background-color: transparent; }
 
 .navbar-default .navbar-nav > li > a {
@@ -5877,13 +5877,25 @@ h2, h3, h4, h5 {
   border: none; }
 
 .navbar-brand {
-  margin-top: -15px; }
+  margin-top: 0px; }
   .navbar-brand a {
     font-family: "Raleway", sans-serif;
-    color: #ffffff; }
+    color: black; }
   .navbar-brand img {
     display: inline-block;
-    width: 5%; }
+    width: 5%;
+    margin-left: 10px; }
+
+.navbar {
+  -webkit-transition: all 0.6s ease-out;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out; }
+
+.navbar.scrolled {
+  background: rgba(71, 71, 107, 0.9);
+  background: rgba(71, 71, 107, 0.9); }
 
 .container.text-center.title h1 {
   color: #ffffff;
@@ -5901,9 +5913,9 @@ h2, h3, h4, h5 {
   .container.homepage h2 {
     color: #33334c; }
   .container.homepage a {
-    color: #33334c;
+    color: #6b6b47;
     font-family: "Raleway", sans-serif;
-    font-size: 20px; }
+    font-size: 30px; }
   .container.homepage a:hover {
     color: #47476b; }
 
@@ -5940,5 +5952,17 @@ footer.footer {
   background-color: #ffffff; }
   footer.footer ul {
     list-style-type: none; }
+
+span.glyphicon {
+  padding: 5px; }
+
+.menu-item {
+  text-align: center;
+  margin-top: 60px; }
+  .menu-item > .row {
+    color: black; }
+  .menu-item img {
+    display: inline-block;
+    width: 20%; }
 
 /*# sourceMappingURL=main.css.map */
