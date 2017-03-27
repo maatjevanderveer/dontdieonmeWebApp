@@ -30,77 +30,77 @@ return true;
 function next_step1() {
 document.getElementById("q1").style.display = "none";
 document.getElementById("q2").style.display = "block";
-document.getElementById("active2").style.color = "red";
+document.getElementById("active2").style.color = "#56d9b7";
 }
 // Function that executes on click of 1st previous button.
 function prev_step1() {
 document.getElementById("q1").style.display = "block";
 document.getElementById("q2").style.display = "none";
-document.getElementById("active1").style.color = "red";
-document.getElementById("active2").style.color = "gray";
+document.getElementById("active1").style.color = "#56d9b7";
+document.getElementById("active2").style.color = "#56d9b7";
 }
 // Function that executes on click of 2nd next button.
 function next_step2() {
 document.getElementById("q2").style.display = "none";
 document.getElementById("q3").style.display = "block";
-document.getElementById("active3").style.color = "red";
+document.getElementById("active3").style.color = "#56d9b7";
 }
 // Function that executes on click of 2nd previous button.
 function prev_step2() {
 document.getElementById("q3").style.display = "none";
 document.getElementById("q2").style.display = "block";
-document.getElementById("active2").style.color = "red";
-document.getElementById("active3").style.color = "gray";
+document.getElementById("active2").style.color = "#56d9b7";
+document.getElementById("active3").style.color = "#56d9b7";
 }
 // Function that executes on click of 3rd next button.
 function next_step3() {
 document.getElementById("q3").style.display = "none";
 document.getElementById("q4").style.display = "block";
-document.getElementById("active3").style.color = "red";
+document.getElementById("active4").style.color = "#56d9b7";
 }
 // Function that executes on click of 3rd previous button.
 function prev_step3() {
 document.getElementById("q4").style.display = "none";
 document.getElementById("q3").style.display = "block";
-document.getElementById("active2").style.color = "red";
-document.getElementById("active3").style.color = "gray";
+document.getElementById("active3").style.color = "#56d9b7";
+document.getElementById("active4").style.color = "#56d9b7";
 }
 // Function that executes on click of 4th next button.
 function next_step4() {
 document.getElementById("q4").style.display = "none";
 document.getElementById("q5").style.display = "block";
-document.getElementById("active3").style.color = "red";
+document.getElementById("active4").style.color = "#56d9b7";
 }
 // Function that executes on click of 4th previous button.
 function prev_step4() {
 document.getElementById("q5").style.display = "none";
 document.getElementById("q4").style.display = "block";
-document.getElementById("active2").style.color = "red";
-document.getElementById("active3").style.color = "gray";
+document.getElementById("active4").style.color = "#56d9b7";
+document.getElementById("active5").style.color = "#56d9b7";
 }
 // Function that executes on click of 5th next button.
 function next_step5() {
 document.getElementById("q5").style.display = "none";
 document.getElementById("q6").style.display = "block";
-document.getElementById("active3").style.color = "red";
+document.getElementById("active5").style.color = "#56d9b7";
 }
 // Function that executes on click of 5th previous button.
 function prev_step5() {
 document.getElementById("q6").style.display = "none";
 document.getElementById("q5").style.display = "block";
-document.getElementById("active2").style.color = "red";
-document.getElementById("active3").style.color = "gray";
+document.getElementById("active5").style.color = "#56d9b7";
+document.getElementById("active6").style.color = "#56d9b7";
 }
 // Function that executes on click of 6th next button.
 function next_step6() {
 document.getElementById("q6").style.display = "none";
 document.getElementById("q7").style.display = "block";
-document.getElementById("active3").style.color = "red";
+document.getElementById("active6").style.color = "#56d9b7";
 }
 // Function that executes on click of 6th previous button.
 function prev_step6() {
 document.getElementById("q7").style.display = "none";
 document.getElementById("q6").style.display = "block";
-document.getElementById("active2").style.color = "red";
-document.getElementById("active3").style.color = "gray";
+document.getElementById("active6").style.color = "#56d9b7";
+document.getElementById("active7").style.color = "#56d9b7";
 }

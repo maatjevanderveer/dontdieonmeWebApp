@@ -45,7 +45,7 @@ app.post('/questionnaire', function(request, response){
 	}).then(function(){
 		response.redirect("/")
 	})
-	console.log('ik werk')
+	console.log('answers are added to table in db')
 })
 
 app.listen(3000, () => {

@@ -6021,17 +6021,17 @@ input[type=submit], input[type=button] {
   margin: 15px 25px;
   padding: 5px;
   height: 40px;
-  background-color: #a0522d;
+  background-color: #56d9b7;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-family: "Karla", sans-serif; }
 
-h2, p {
+fieldset h2, fieldset p {
   text-align: center;
   font-family: "Karla", sans-serif; }
 
-li {
+ul#progressbar li {
   margin-right: 52px;
   display: inline;
   color: #ffffff;
