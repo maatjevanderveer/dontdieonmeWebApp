@@ -5823,14 +5823,14 @@ h2, h3, h4, h5 {
   text-align: center; }
 
 .full.img-1 {
-  background: url(../img/bg_3.jpg) no-repeat center center fixed;
+  background: url(../img/EK_2.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
 
 .full.img-2 {
-  background: url(../img/bg_2.jpg) no-repeat center center fixed;
+  background: url(../img/EK_3.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -5898,19 +5898,21 @@ h2, h3, h4, h5 {
   background: rgba(71, 71, 107, 0.9);
   background: rgba(71, 71, 107, 0.9); }
 
-.container.text-center.title h1 {
-  color: #ffffff;
-  font-size: 75px;
-  text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
-  padding-top: 200px;
-  padding-bottom: 200px;
-  border-color: #1e1e2e;
-  margin: 10px; }
+.container.text-center.title {
+  margin-bottom: -30px; }
+  .container.text-center.title h1 {
+    color: #ffffff;
+    font-size: 75px;
+    text-shadow: 3px 0 rgba(0, 0, 0, 0.5), 0 3px rgba(0, 0, 0, 0.5), 3px 0 rgba(0, 0, 0, 0.5), 0 3px rgba(0, 0, 0, 0.5);
+    padding-top: 200px;
+    padding-bottom: 200px;
+    border-color: #1e1e2e;
+    margin: 10px; }
 
 .container.homepage {
-  background: gray;
   background: rgba(255, 255, 255, 0.8);
-  padding: 50px; }
+  padding: 80px;
+  position: relative; }
   .container.homepage h2 {
     color: #33334c; }
   .container.homepage a {
@@ -5921,14 +5923,14 @@ h2, h3, h4, h5 {
     color: #47476b; }
 
 section.container.howdoesitwork {
-  background: #ffffff;
-  padding-top: 50px;
-  padding-bottom: 50px; }
+  background: rgba(255, 255, 255, 0.8);
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
 .container.aboutus {
   background: gray;
   background: rgba(255, 255, 255, 0.8);
-  padding: 50px;
+  padding: 80px;
   margin-top: 50px;
   margin-bottom: 50px; }
   .container.aboutus h2 {
@@ -5942,9 +5944,9 @@ section.container.howdoesitwork {
 
 .container.text-center.contact h1 {
   color: #ffffff;
-  font-size: 32px;
-  text-shadow: 0px 0 black, 0 1px black, 1px 0 black, 0 0px black;
-  padding-top: 50px;
+  font-size: 42px;
+  text-shadow: 0px 0 black, 0 2px rgba(0, 0, 0, 0.25), 2px 0 rgba(0, 0, 0, 0.25), 0 0px black;
+  padding-top: 80px;
   padding-bottom: 50px;
   border-color: #1e1e2e;
   margin: 10px; }
