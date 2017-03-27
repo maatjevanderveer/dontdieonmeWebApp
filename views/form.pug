@@ -14,6 +14,12 @@ html(lang='en')
 		link(href='https://fonts.googleapis.com/css?family=Raleway', rel='stylesheet')
 		
 		link(rel='shortcut icon', type='image/x-icon', href='/img/favicon.ico')
+
+		script(src='./js/jquery-3.1.1.js')
+		script(src='./js/bootstrap.min.js')
+		script(src='./js/bootstrap.js')
+		script(src='./js/custom.js', type='text/javascript')
+
 		style#style-1-cropbar-clipper.
 			.en-markup-crop-options {
 				top: 18px !important;
@@ -53,117 +59,314 @@ html(lang='en')
 							li
 								a(href='/' + '#contact') Contact
 							//-li
-								a(href='#') Log in / Sign Up
+								a(href='#') Log in / Sign Up	
 
 		section.full.img-3
 			.container
-				form#msform
-					ul#progressbar
-						li.active LICHT
-						li GROENE VINGERS
-						li HUISMUS VS. EXPAT
-						li VOCHT
-						li RUIMTE
-						li DESIGN
-						li LIEFDE
+				.main
+					form.regform(action='/questionnaire', method='POST')#msform
+						ul#progressbar
+							li#active1 LICHT
+							li#active2 GROENE VINGERS
+							li#active3 HUISMUS VS EXPAT
+							li#active4 VOCHT
+							li#active5 RUIMTE
+							li#active6 DESIGN
+							li#active7 LIEFDE
+						fieldset#q1
+							h2.title LICHT
+							p.subtitle Hoeveel licht krijgt de plant?
+							br
+							input(type='radio', name='q1', value="1")
+							label(for='question1') Ik leef op kunstmatig licht
+							br
+							input(type='radio', name='q1', value="2") 
+							label(for='question2') Halfschaduw, halfzon
+							br
+							input(type='radio', name='q1', value="3")
+							label(for='question3') Volop zon de hele dag door
+							br 
+							input#next_btn1(onclick='next_step1()', type='button', value='Next')
+						fieldset#q2
+							h2.title GROENE VINGERS
+							p.subtitle Hoe groen zijn jouw vingers?
+							br
+							input(type='radio', name='q2', value="true")
+							label(for='question1') Rob Verlinden is er niks bij
+							br
+							input(type='radio', name='q2', value="false") 
+							label(for='question2') Zo groen als mijn laatste dode plant
+							br 
+							input#pre_btn1(onclick='prev_step1()', type='button', value='Previous')
+							br 
+							input#next_btn2(name='next', onclick='next_step2()', type='button', value='Next')
+						fieldset#q3
+							h2.title HUISMUS VS. EXPAT
+							p.subtitle Hoe vaak ben je weg?
+							br 
+							input(type='radio', name='q3', value="true")
+							label(for='question1') Ja: home is where the heart is, duh
+							br
+							input(type='radio', name='q3', value="false") 
+							label(for='question2') Nee: Oost west, thuis best
+							br 
+							input#pre_btn2(onclick='prev_step2()', type='button', value='Previous')
+							br 
+							input#next_btn2(name='next', onclick='next_step3()', type='button', value='Next')
+						fieldset#q4
+							h2.fs-title VOCHT
+							h3.fs-subtitle is de ruimte relatief vochtig?
+							br
+							input(type='radio', name='q4', value="true")
+							label(for='question1') Best wel
+							br
+							input(type='radio', name='q4', value="false") 
+							label(for='question2') Valt mee
+							br
+							input#pre_btn2(onclick='prev_step3()', type='button', value='Previous')
+							br  
+							input#next_btn2(name='next', onclick='next_step4()', type='button', value='Next')
+						fieldset#q5
+							h2.fs-title RUIMTE
+							h3.fs-subtitle hoeveel ruimte heb je voor de plant?
+							br
+							input(type='radio', name='q5', value="true")
+							label(for='question1') Weinig: hoe kleiner de plant, hoe beter
+							br
+							input(type='radio', name='q5', value="false") 
+							label(for='question2') Veel: hoe groter de plant, hoe beter
+							br
+							input#pre_btn2(onclick='prev_step4()', type='button', value='Previous')
+							br  
+							input#next_btn2(name='next', onclick='next_step5()', type='button', value='Next')
+						fieldset#q6
+							h2.fs-title DESIGN
+							h3.fs-subtitle Wat is je smaak?
+							br
+							input(type='radio', name='q6', value="true")
+							label(for='question1') Modern &amp; minimalistisch
+							br
+							input(type='radio', name='q6', value="false") 
+							label(for='question2') Druk &amp; vintage
+							br
+							input#pre_btn2(onclick='prev_step5()', type='button', value='Previous')
+							br  
+							input#next_btn2(name='next', onclick='next_step6()', type='button', value='Next')
+						fieldset#q7
+							h2.fs-title LIEFDE
+							h3.fs-subtitle hoeveel zorg en liefde krijgen je planten?
+							br
+							input(type='radio', name='q7', value="true")
+							label(for='question1') Ze zien daglicht, daar is ook alles mee gezegd
+							br
+							input(type='radio', name='q7', value="false") 
+							label(for='question2') Ze krijgen een naam, en ik praat met ze
+							br
+							input#pre_btn2(onclick='prev_step5()', type='button', value='Previous')
+							br
+							input.submit_btn(onclick='validation(event)', type='submit', value='Submit')
 
-					fieldset
-						h2.fs-title LICHT
-						h3.fs-subtitle hoeveel licht krijgt de plant?
-						|
-						input(type='radio', name='question1', value="A")
-						label(for='question1') Ik leef op kunstmatig licht
-						|
-						input(type='radio', name='question1', value="B") 
-						label(for='question2') Halfschaduw, halfzon
-						|
-						input(type='radio', name='question1', value="C")
-						label(for='question3') Volop zon de hele dag door
-						|
-						br
-						input.next.action-button(type='button', name='next', value='Next')
-					fieldset
-						h2.fs-title GROENE VINGERS
-						h3.fs-subtitle hoe groen zijn jouw vingers?
-						|
-						input(type='radio', name='question2', value="A")
-						label(for='question1') Rob Verlinden is er niks bij
-						|
-						input(type='radio', name='question2', value="B") 
-						label(for='question2') Zo groen als mijn laatste dode plant
-						|
-						br
-						input.previous.action-button(type='button', name='previous', value='Previous')
-						|
-						input.next.action-button(type='button', name='next', value='Next')
-					fieldset
-						h2.fs-title HUISMUS vs EXPAT
-						h3.fs-subtitle ben je vaak weg?
-						|
-						input(type='radio', name='question3', value="A")
-						label(for='question1') Ja: home is where the heart is, duh
-						|
-						input(type='radio', name='question3', value="B") 
-						label(for='question2') Nee: Oost west, thuis best
-						|
-						br
-						input.previous.action-button(type='button', name='previous', value='Previous')
-						|
-						input.next.action-button(type='button', name='next', value='Next')
-					fieldset
-						h2.fs-title VOCHT
-						h3.fs-subtitle is de ruimte relatief vochtig?
-						|
-						input(type='radio', name='question4', value="A")
-						label(for='question1') Best wel
-						|
-						input(type='radio', name='question4', value="B") 
-						label(for='question2') Valt mee
-						|
-						input.previous.action-button(type='button', name='previous', value='Previous')
-						|
-						input.next.action-button(type='button', name='next', value='Next')
-					fieldset
-						h2.fs-title RUIMTE
-						h3.fs-subtitle hoeveel ruimte heb je voor de plant?
-						|
-						input(type='radio', name='question5', value="A")
-						label(for='question1') Weinig: hoe kleiner de plant, hoe beter
-						|
-						input(type='radio', name='question5', value="B") 
-						label(for='question2') Veel: hoe groter de plant, hoe beter
-						|
-						input.previous.action-button(type='button', name='previous', value='Previous')
-						|
-						input.next.action-button(type='button', name='next', value='Next')
-					fieldset
-						h2.fs-title DESIGN
-						h3.fs-subtitle Wat is je smaak?
-						|
-						input(type='radio', name='question6', value="A")
-						label(for='question1') Modern &amp; minimalistisch
-						|
-						input(type='radio', name='question6', value="B") 
-						label(for='question2') Druk &amp; vintage
-						|
-						input.previous.action-button(type='button', name='previous', value='Previous')
-						|
-						input.next.action-button(type='button', name='next', value='Next')
-					fieldset
-						h2.fs-title LIEFDE
-						h3.fs-subtitle hoeveel zorg en liefde krijgen je planten?
-						|
-						input(type='radio', name='question7', value="A")
-						label(for='question1') Ze zien daglicht, daar is ook alles mee gezegd
-						|
-						input(type='radio', name='question7', value="B") 
-						label(for='question2') Ze krijgen een naam, en ik praat met ze
-						|
-						input.previous.action-button(type='button', name='previous', value='Previous')
-						|
-						input.submit.action-button(type='submit', name='submit', value='Submit')
+
+		//- section.full.img-3 
+		//- 	.container
+		//- 		form(method="POST", action="/questionnaire")#msform
+		//- 			ul#progressbar
+		//- 				li.active LICHT
+		//- 				li GROENE VINGERS
+		//- 				li HUISMUS VS. EXPAT
+		//- 				li VOCHT
+		//- 				li RUIMTE
+		//- 				li DESIGN
+		//- 				li LIEFDE
+		//- 			fieldset#q1
+		//- 				h2.fs-title LICHT
+		//- 				h3.fs-subtitle hoeveel licht krijgt de plant?
+		//- 				|
+		//- 				input(type='radio', name='q1', value="1")
+		//- 				label(for='question1') Ik leef op kunstmatig licht
+		//- 				|
+		//- 				input(type='radio', name='q1', value="2") 
+		//- 				label(for='question2') Halfschaduw, halfzon
+		//- 				|
+		//- 				input(type='radio', name='q1', value="3")
+		//- 				label(for='question3') Volop zon de hele dag door
+		//- 				|
+		//- 				br
+		//- 				input.next.action-button(type='button', value='Next', name='next')
+		//- 				|
+		//- 			fieldset#q2
+		//- 				h2.fs-title GROENE VINGERS
+		//- 				h3.fs-subtitle hoe groen zijn jouw vingers?
+		//- 				|
+		//- 				input(type='radio', name='q2', value="true")
+		//- 				label(for='question1') Rob Verlinden is er niks bij
+		//- 				|
+		//- 				input(type='radio', name='q2', value="false") 
+		//- 				label(for='question2') Zo groen als mijn laatste dode plant
+		//- 				|
+		//- 				br
+		//- 			fieldset#q3
+		//- 				h2.fs-title HUISMUS vs EXPAT
+		//- 				h3.fs-subtitle ben je vaak weg?
+		//- 				|
+		//- 				input(type='radio', name='q3', value="true")
+		//- 				label(for='question1') Ja: home is where the heart is, duh
+		//- 				|
+		//- 				input(type='radio', name='q3', value="false") 
+		//- 				label(for='question2') Nee: Oost west, thuis best
+		//- 				|
+		//- 				br
+		//- 			fieldset#q4
+		//- 				h2.fs-title VOCHT
+		//- 				h3.fs-subtitle is de ruimte relatief vochtig?
+		//- 				|
+		//- 				input(type='radio', name='q4', value="true")
+		//- 				label(for='question1') Best wel
+		//- 				|
+		//- 				input(type='radio', name='q4', value="false") 
+		//- 				label(for='question2') Valt mee
+		//- 				|
+		//- 			fieldset#q5
+		//- 				h2.fs-title RUIMTE
+		//- 				h3.fs-subtitle hoeveel ruimte heb je voor de plant?
+		//- 				|
+		//- 				input(type='radio', name='q5', value="true")
+		//- 				label(for='question1') Weinig: hoe kleiner de plant, hoe beter
+		//- 				|
+		//- 				input(type='radio', name='q5', value="false") 
+		//- 				label(for='question2') Veel: hoe groter de plant, hoe beter
+		//- 				|
+		//- 			fieldset#q6
+		//- 				h2.fs-title DESIGN
+		//- 				h3.fs-subtitle Wat is je smaak?
+		//- 				|
+		//- 				input(type='radio', name='q6', value="true")
+		//- 				label(for='question1') Modern &amp; minimalistisch
+		//- 				|
+		//- 				input(type='radio', name='q6', value="false") 
+		//- 				label(for='question2') Druk &amp; vintage
+		//- 				|
+		//- 			fieldset#q7
+		//- 				h2.fs-title LIEFDE
+		//- 				h3.fs-subtitle hoeveel zorg en liefde krijgen je planten?
+		//- 				|
+		//- 				input(type='radio', name='q7', value="true")
+		//- 				label(for='question1') Ze zien daglicht, daar is ook alles mee gezegd
+		//- 				|
+		//- 				input(type='radio', name='q7', value="false") 
+		//- 				label(for='question2') Ze krijgen een naam, en ik praat met ze
+		//- 				|
+		//- 			input.submit.action-button(type='submit', name='submit', value='Submit')
+
+		//- section.full.img-3
+		//- 	.container
+		//- 		form(method="POST", action="/test")#msform
+		//- 			ul#progressbar
+		//- 				li.active LICHT
+		//- 				li GROENE VINGERS
+		//- 				li HUISMUS VS. EXPAT
+		//- 				li VOCHT
+		//- 				li RUIMTE
+		//- 				li DESIGN
+		//- 				li LIEFDE
+
+		//- 			fieldset#q1
+		//- 				h2.fs-title LICHT
+		//- 				h3.fs-subtitle hoeveel licht krijgt de plant?
+		//- 				|
+		//- 				input(type='radio', name='question1', value="1")
+		//- 				label(for='question1') Ik leef op kunstmatig licht
+		//- 				|
+		//- 				input(type='radio', name='question1', value="2") 
+		//- 				label(for='question2') Halfschaduw, halfzon
+		//- 				|
+		//- 				input(type='radio', name='question1', value="3")
+		//- 				label(for='question3') Volop zon de hele dag door
+		//- 				|
+		//- 				br
+		//- 				input.next.action-button(type='button', value='Next', name='next')
+		//- 			fieldset#q2
+		//- 				h2.fs-title GROENE VINGERS
+		//- 				h3.fs-subtitle hoe groen zijn jouw vingers?
+		//- 				|
+		//- 				input(type='radio', name='question2', value="true")
+		//- 				label(for='question1') Rob Verlinden is er niks bij
+		//- 				|
+		//- 				input(type='radio', name='question2', value="false") 
+		//- 				label(for='question2') Zo groen als mijn laatste dode plant
+		//- 				|
+		//- 				br
+		//- 				input.previous.action-button(type='button', name='previous', value='Previous')
+		//- 				|
+		//- 				input.next.action-button(type='button', name='next', value='Next')
+		//- 			fieldset
+		//- 				h2.fs-title HUISMUS vs EXPAT
+		//- 				h3.fs-subtitle ben je vaak weg?
+		//- 				|
+		//- 				input(type='radio', name='question3', value="true")
+		//- 				label(for='question1') Ja: home is where the heart is, duh
+		//- 				|
+		//- 				input(type='radio', name='question3', value="false") 
+		//- 				label(for='question2') Nee: Oost west, thuis best
+		//- 				|
+		//- 				br
+		//- 				input.previous.action-button(type='button', name='previous', value='Previous')
+		//- 				|
+		//- 				input.next.action-button(type='button', name='next', value='Next')
+		//- 			fieldset
+		//- 				h2.fs-title VOCHT
+		//- 				h3.fs-subtitle is de ruimte relatief vochtig?
+		//- 				|
+		//- 				input(type='radio', name='question4', value="true")
+		//- 				label(for='question1') Best wel
+		//- 				|
+		//- 				input(type='radio', name='question4', value="false") 
+		//- 				label(for='question2') Valt mee
+		//- 				|
+		//- 				input.previous.action-button(type='button', name='previous', value='Previous')
+		//- 				|
+		//- 				input.next.action-button(type='button', name='next', value='Next')
+		//- 			fieldset
+		//- 				h2.fs-title RUIMTE
+		//- 				h3.fs-subtitle hoeveel ruimte heb je voor de plant?
+		//- 				|
+		//- 				input(type='radio', name='question5', value="true")
+		//- 				label(for='question1') Weinig: hoe kleiner de plant, hoe beter
+		//- 				|
+		//- 				input(type='radio', name='question5', value="false") 
+		//- 				label(for='question2') Veel: hoe groter de plant, hoe beter
+		//- 				|
+		//- 				input.previous.action-button(type='button', name='previous', value='Previous')
+		//- 				|
+		//- 				input.next.action-button(type='button', name='next', value='Next')
+		//- 			fieldset
+		//- 				h2.fs-title DESIGN
+		//- 				h3.fs-subtitle Wat is je smaak?
+		//- 				|
+		//- 				input(type='radio', name='question6', value="true")
+		//- 				label(for='question1') Modern &amp; minimalistisch
+		//- 				|
+		//- 				input(type='radio', name='question6', value="false") 
+		//- 				label(for='question2') Druk &amp; vintage
+		//- 				|
+		//- 				input.previous.action-button(type='button', name='previous', value='Previous')
+		//- 				|
+		//- 				input.next.action-button(type='button', name='next', value='Next')
+		//- 			fieldset
+		//- 				h2.fs-title LIEFDE
+		//- 				h3.fs-subtitle hoeveel zorg en liefde krijgen je planten?
+		//- 				|
+		//- 				input(type='radio', name='question7', value="true")
+		//- 				label(for='question1') Ze zien daglicht, daar is ook alles mee gezegd
+		//- 				|
+		//- 				input(type='radio', name='question7', value="false") 
+		//- 				label(for='question2') Ze krijgen een naam, en ik praat met ze
+		//- 				|
+		//- 				input.previous.action-button(type='button', name='previous', value='Previous')
+		//- 				|
+		//- 				input.submit.action-button(type='submit', name='submit', value='Submit')
 		
-
+		//-FOOTER
 		footer.footer
 			.container
 				.row
@@ -199,6 +402,7 @@ html(lang='en')
 		script(src='./js/jquery-3.1.1.js')
 		script(src='./js/bootstrap.min.js')
 		script(src='./js/bootstrap.js')
+		script(src='./js/custom.js', type='text/javascript')
 
 
 		//- JS FOR NAVBAR
@@ -224,83 +428,83 @@ html(lang='en')
 			//(src='http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js', type='text/javascript')
 			//(src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js', type='text/javascript')
 
-			var current_fs, next_fs, previous_fs; //fieldsets
-			var left, opacity, scale; //fieldset properties which we will animate
-			var animating; //flag to prevent quick multi-click glitches
+			//- var current_fs, next_fs, previous_fs; //fieldsets
+			//- var left, opacity, scale; //fieldset properties which we will animate
+			//- var animating; //flag to prevent quick multi-click glitches
 
-			$(".next").click(function(){
-				if(animating) return false;
-				animating = true;
+			//- $(".next").click(function(){
+			//- 	if(animating) return false;
+			//- 	animating = true;
 				
-				current_fs = $(this).parent();
-				next_fs = $(this).parent().next();
+			//- 	current_fs = $(this).parent();
+			//- 	next_fs = $(this).parent().next();
 				
-				//activate next step on progressbar using the index of next_fs
-				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			//- 	//activate next step on progressbar using the index of next_fs
+			//- 	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 				
-				//show the next fieldset
-				next_fs.show(); 
-				//hide the current fieldset with style
-				current_fs.animate({opacity: 0}, {
-					step: function(now, mx) {
-						//as the opacity of current_fs reduces to 0 - stored in "now"
-						//1. scale current_fs down to 80%
-						scale = 1 - (1 - now) * 0.2;
-						//2. bring next_fs from the right(50%)
-						left = (now * 50)+"%";
-						//3. increase opacity of next_fs to 1 as it moves in
-						opacity = 1 - now;
-						current_fs.css({'transform': 'scale('+scale+')'});
-						next_fs.css({'left': left, 'opacity': opacity});
-					}, 
-					duration: 800, 
-					complete: function(){
-						current_fs.hide();
-						animating = false;
-					}, 
-					//this comes from the custom easing plugin
-					easing: 'easeInOutBack'
-				});
-			});
+			//- 	//show the next fieldset
+			//- 	next_fs.show(); 
+			//- 	//hide the current fieldset with style
+			//- 	current_fs.animate({opacity: 0}, {
+			//- 		step: function(now, mx) {
+			//- 			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//- 			//1. scale current_fs down to 80%
+			//- 			scale = 1 - (1 - now) * 0.2;
+			//- 			//2. bring next_fs from the right(50%)
+			//- 			left = (now * 50)+"%";
+			//- 			//3. increase opacity of next_fs to 1 as it moves in
+			//- 			opacity = 1 - now;
+			//- 			current_fs.css({'transform': 'scale('+scale+')'});
+			//- 			next_fs.css({'left': left, 'opacity': opacity});
+			//- 		}, 
+			//- 		duration: 800, 
+			//- 		complete: function(){
+			//- 			current_fs.hide();
+			//- 			animating = false;
+			//- 		}, 
+			//- 		//this comes from the custom easing plugin
+			//- 		easing: 'easeInOutBack'
+			//- 	});
+			//- });
 
-			$(".previous").click(function(){
-				if(animating) return false;
-				animating = true;
+			//- $(".previous").click(function(){
+			//- 	if(animating) return false;
+			//- 	animating = true;
 				
-				current_fs = $(this).parent();
-				previous_fs = $(this).parent().prev();
+			//- 	current_fs = $(this).parent();
+			//- 	previous_fs = $(this).parent().prev();
 				
-				//de-activate current step on progressbar
-				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+			//- 	//de-activate current step on progressbar
+			//- 	$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
 				
-				//show the previous fieldset
-				previous_fs.show(); 
-				//hide the current fieldset with style
-				current_fs.animate({opacity: 0}, {
-					step: function(now, mx) {
-						//as the opacity of current_fs reduces to 0 - stored in "now"
-						//1. scale previous_fs from 80% to 100%
-						scale = 0.8 + (1 - now) * 0.2;
-						//2. take current_fs to the right(50%) - from 0%
-						left = ((1-now) * 50)+"%";
-						//3. increase opacity of previous_fs to 1 as it moves in
-						opacity = 1 - now;
-						current_fs.css({'left': left});
-						previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-					}, 
-					duration: 800, 
-					complete: function(){
-						current_fs.hide();
-						animating = false;
-					}, 
-					//this comes from the custom easing plugin
-					easing: 'easeInOutBack'
-				});
-			});
+			//- 	//show the previous fieldset
+			//- 	previous_fs.show(); 
+			//- 	//hide the current fieldset with style
+			//- 	current_fs.animate({opacity: 0}, {
+			//- 		step: function(now, mx) {
+			//- 			//as the opacity of current_fs reduces to 0 - stored in "now"
+			//- 			//1. scale previous_fs from 80% to 100%
+			//- 			scale = 0.8 + (1 - now) * 0.2;
+			//- 			//2. take current_fs to the right(50%) - from 0%
+			//- 			left = ((1-now) * 50)+"%";
+			//- 			//3. increase opacity of previous_fs to 1 as it moves in
+			//- 			opacity = 1 - now;
+			//- 			current_fs.css({'left': left});
+			//- 			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+			//- 		}, 
+			//- 		duration: 800, 
+			//- 		complete: function(){
+			//- 			current_fs.hide();
+			//- 			animating = false;
+			//- 		}, 
+			//- 		//this comes from the custom easing plugin
+			//- 		easing: 'easeInOutBack'
+			//- 	});
+			//- });
 
-			$(".submit").click(function(){
-				return false;
-			})
+			//- $(".submit").click(function(){
+			//- 	return false;
+			//- })
 
 		//- 	function show_next(id,nextid,bar) {
 		//-         var ele=document.getElementById(id)
