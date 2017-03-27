@@ -45,10 +45,14 @@ html(lang='en')
 							li.active
 								a(href='/') Home
 							li
-								a(href='#') About Us
+								a(href='/' + '#questionnaire') Questionnaire
 							li
-								a(href='#') Contact
+								a(href='/' + '#howdoesitwork') How Does it Work?
 							li
+								a(href='/' + '#aboutus') About Us
+							li
+								a(href='/' + '#contact') Contact
+							//-li
 								a(href='#') Log in / Sign Up
 
 		section.full.img-3
@@ -62,6 +66,7 @@ html(lang='en')
 						li RUIMTE
 						li DESIGN
 						li LIEFDE
+
 					fieldset
 						h2.fs-title LICHT
 						h3.fs-subtitle hoeveel licht krijgt de plant?
@@ -73,7 +78,7 @@ html(lang='en')
 						label(for='question2') Halfschaduw, halfzon
 						|
 						input(type='radio', name='question1', value="C")
-						label(for='question1') Volop zon de hele dag door
+						label(for='question3') Volop zon de hele dag door
 						|
 						br
 						input.next.action-button(type='button', name='next', value='Next')
@@ -81,10 +86,10 @@ html(lang='en')
 						h2.fs-title GROENE VINGERS
 						h3.fs-subtitle hoe groen zijn jouw vingers?
 						|
-						input(type='radio', name='question2', value="true")
+						input(type='radio', name='question2', value="A")
 						label(for='question1') Rob Verlinden is er niks bij
 						|
-						input(type='radio', name='question2', value="false") 
+						input(type='radio', name='question2', value="B") 
 						label(for='question2') Zo groen als mijn laatste dode plant
 						|
 						br
@@ -95,10 +100,10 @@ html(lang='en')
 						h2.fs-title HUISMUS vs EXPAT
 						h3.fs-subtitle ben je vaak weg?
 						|
-						input(type='radio', name='question3', value="true")
+						input(type='radio', name='question3', value="A")
 						label(for='question1') Ja: home is where the heart is, duh
 						|
-						input(type='radio', name='question3', value="false") 
+						input(type='radio', name='question3', value="B") 
 						label(for='question2') Nee: Oost west, thuis best
 						|
 						br
@@ -109,49 +114,49 @@ html(lang='en')
 						h2.fs-title VOCHT
 						h3.fs-subtitle is de ruimte relatief vochtig?
 						|
-						input(type='radio', name='question4', value="true")
+						input(type='radio', name='question4', value="A")
 						label(for='question1') Best wel
 						|
-						input(type='radio', name='question4', value="false") 
+						input(type='radio', name='question4', value="B") 
 						label(for='question2') Valt mee
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
-						input.submit.action-button(type='submit', name='submit', value='Submit')
+						input.next.action-button(type='button', name='next', value='Next')
 					fieldset
 						h2.fs-title RUIMTE
 						h3.fs-subtitle hoeveel ruimte heb je voor de plant?
 						|
-						input(type='radio', name='question5', value="true")
+						input(type='radio', name='question5', value="A")
 						label(for='question1') Weinig: hoe kleiner de plant, hoe beter
 						|
-						input(type='radio', name='question5', value="false") 
+						input(type='radio', name='question5', value="B") 
 						label(for='question2') Veel: hoe groter de plant, hoe beter
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
-						input.submit.action-button(type='submit', name='submit', value='Submit')
+						input.next.action-button(type='button', name='next', value='Next')
 					fieldset
 						h2.fs-title DESIGN
 						h3.fs-subtitle Wat is je smaak?
 						|
-						input(type='radio', name='question6', value="true")
+						input(type='radio', name='question6', value="A")
 						label(for='question1') Modern &amp; minimalistisch
 						|
-						input(type='radio', name='question6', value="false") 
+						input(type='radio', name='question6', value="B") 
 						label(for='question2') Druk &amp; vintage
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
-						input.submit.action-button(type='submit', name='submit', value='Submit')
+						input.next.action-button(type='button', name='next', value='Next')
 					fieldset
 						h2.fs-title LIEFDE
 						h3.fs-subtitle hoeveel zorg en liefde krijgen je planten?
 						|
-						input(type='radio', name='question7', value="true")
+						input(type='radio', name='question7', value="A")
 						label(for='question1') Ze zien daglicht, daar is ook alles mee gezegd
 						|
-						input(type='radio', name='question7', value="false") 
+						input(type='radio', name='question7', value="B") 
 						label(for='question2') Ze krijgen een naam, en ik praat met ze
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
@@ -174,19 +179,29 @@ html(lang='en')
 							.menu-item
 								p.text-muted
 									ul#nav
+										a(href='/') Home
 										li
-											a(href='/') Home
+											a(href='/' + '#questionnaire') Questionnaire
 										li
-											a(href='/#') About Us
+											a(href='/' + '#howdoesitwork') How Does it Work?
 										li
-											a(href='/#') Contact
+											a(href='/' + '#aboutus') About Us
 										li
-											a(href='/#') Log In / Sign Up
-										p
+											a(href='/' + '#contact') Contact
+										//-li
+											a(href='#') Log in / Sign Up
+				.row
+					.menu-item
+						p made with love by Maatje van der Veer
+						p illustrations by Elzeline Kooy
 
+		//- JAVASCRIPT
 		script(src='./js/jquery-3.1.1.js')
 		script(src='./js/bootstrap.min.js')
 		script(src='./js/bootstrap.js')
+
+
+		//- JS FOR NAVBAR
 		script.
 			function checkScroll(){
 				var startY = $('.navbar').height() * 2;
@@ -204,88 +219,128 @@ html(lang='en')
 				});
 			}
 
-		script(src='http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js', type='text/javascript')
-
-		script(src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js', type='text/javascript')
-
+		//- JS FOR QUESTIONNAIRE
 		script.
-			var current_fs, next_fs, previous_fs; fieldsets
+			//(src='http://thecodeplayer.com/uploads/js/jquery-1.9.1.min.js', type='text/javascript')
+			//(src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js', type='text/javascript')
+
+			var current_fs, next_fs, previous_fs; //fieldsets
 			var left, opacity, scale; //fieldset properties which we will animate
 			var animating; //flag to prevent quick multi-click glitches
 
-		script.
 			$(".next").click(function(){
-			if(animating) return false;
-			animating = true;
-			
-			current_fs = $(this).parent();
-			next_fs = $(this).parent().next();
-			
-			//activate next step on progressbar using the index of next_fs
-			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
-			
-			//show the next fieldset
-			next_fs.show(); 
-			//hide the current fieldset with style
-			current_fs.animate({opacity: 0}, {
-				step: function(now, mx) {
-					//as the opacity of current_fs reduces to 0 - stored in "now"
-					//1. scale current_fs down to 80%
-					scale = 1 - (1 - now) * 0.2;
-					//2. bring next_fs from the right(50%)
-					left = (now * 50)+"%";
-					//3. increase opacity of next_fs to 1 as it moves in
-					opacity = 1 - now;
-					current_fs.css({'transform': 'scale('+scale+')'});
-					next_fs.css({'left': left, 'opacity': opacity});
-				}, 
-				duration: 800, 
-				complete: function(){
-					current_fs.hide();
-					animating = false;
-				}, 
-				//this comes from the custom easing plugin
-				easing: 'easeInOutBack'
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
+				
+				//activate next step on progressbar using the index of next_fs
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+				
+				//show the next fieldset
+				next_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale current_fs down to 80%
+						scale = 1 - (1 - now) * 0.2;
+						//2. bring next_fs from the right(50%)
+						left = (now * 50)+"%";
+						//3. increase opacity of next_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({'transform': 'scale('+scale+')'});
+						next_fs.css({'left': left, 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
 			});
 
-		script.
 			$(".previous").click(function(){
-			if(animating) return false;
-			animating = true;
-			
-			current_fs = $(this).parent();
-			previous_fs = $(this).parent().prev();
-			
-			//de-activate current step on progressbar
-			$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-			
-			//show the previous fieldset
-			previous_fs.show(); 
-			//hide the current fieldset with style
-			current_fs.animate({opacity: 0}, {
-				step: function(now, mx) {
-					//as the opacity of current_fs reduces to 0 - stored in "now"
-					//1. scale previous_fs from 80% to 100%
-					scale = 0.8 + (1 - now) * 0.2;
-					//2. take current_fs to the right(50%) - from 0%
-					left = ((1-now) * 50)+"%";
-					//3. increase opacity of previous_fs to 1 as it moves in
-					opacity = 1 - now;
-					current_fs.css({'left': left});
-					previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-				}, 
-				duration: 800, 
-				complete: function(){
-					current_fs.hide();
-					animating = false;
-				}, 
-				//this comes from the custom easing plugin
-				easing: 'easeInOutBack'
+				if(animating) return false;
+				animating = true;
+				
+				current_fs = $(this).parent();
+				previous_fs = $(this).parent().prev();
+				
+				//de-activate current step on progressbar
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+				
+				//show the previous fieldset
+				previous_fs.show(); 
+				//hide the current fieldset with style
+				current_fs.animate({opacity: 0}, {
+					step: function(now, mx) {
+						//as the opacity of current_fs reduces to 0 - stored in "now"
+						//1. scale previous_fs from 80% to 100%
+						scale = 0.8 + (1 - now) * 0.2;
+						//2. take current_fs to the right(50%) - from 0%
+						left = ((1-now) * 50)+"%";
+						//3. increase opacity of previous_fs to 1 as it moves in
+						opacity = 1 - now;
+						current_fs.css({'left': left});
+						previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+					}, 
+					duration: 800, 
+					complete: function(){
+						current_fs.hide();
+						animating = false;
+					}, 
+					//this comes from the custom easing plugin
+					easing: 'easeInOutBack'
+				});
 			});
 
-		script.
 			$(".submit").click(function(){
-			return false;
+				return false;
 			})
+
+		//- 	function show_next(id,nextid,bar) {
+		//-         var ele=document.getElementById(id)
+		//-         var error=0;
+		//-         for(var i=0;i<ele.length;i++) {
+		//-             if(ele[i].getElementsByTagName("input").type=="radio" && ele[i].getElementsByTagName("input").value=="") {
+		//-                 error++;
+		//-                 }
+		//-             }
+		//- //if (vraag1 === false || vraag1 === false)
+		//-             if(error==0) {
+		//-                 document.getElementById("question-1").style.display="none";
+		//-                 document.getElementById("question-2").style.display="none";
+		//-                 document.getElementById("question-3").style.display="none";
+		//-                 document.getElementById("question-4").style.display="none";
+		//-                 document.getElementById("question-5").style.display="none";
+		//-                 document.getElementById("question-6").style.display="none";
+		//-                 document.getElementById("question-7").style.display="none";
+		//-                 $("#"+nextid).show();
+		//-                 document.getElementById(bar).style.backgroundColor="#F16664";
+		//-                 document.getElementById(bar).style.color="#FFF";
+		//-             }
+
+		//-         else {
+		//-             alert("Fill All The details");
+		//-         }
+		//-     };
+
+		//-     function show_prev(previd,bar) {
+		//-         document.getElementById("question-1").style.display="none";
+		//-         document.getElementById("question-2").style.display="none";
+		//-         document.getElementById("question-3").style.display="none";
+		//-         document.getElementById("question-4").style.display="none";
+		//-         document.getElementById("question-5").style.display="none";           
+		//-         document.getElementById("question-6").style.display="none";
+		//-         document.getElementById("question-7").style.display="none";
+		//-         $("#"+previd).show();
+		//-         document.getElementById(bar).style.backgroundColor="#FFF";
+		//-         document.getElementById(bar).style.color="#F16664";
+		//-     };
+
 
 

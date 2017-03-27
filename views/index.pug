@@ -45,12 +45,14 @@ html(lang='en')
 							li.active
 								a(href='#home') Home
 							li
+								a(href='#questionnaire') Questionnaire
+							li
 								a(href='#howdoesitwork') How Does it Work?
 							li
 								a(href='#aboutus') About Us
 							li
 								a(href='#contact') Contact
-							li
+							//-li
 								a(href='#') Log in / Sign Up
 
 		section.full.img-1#home
@@ -61,7 +63,7 @@ html(lang='en')
 					strong ON ME
 
 			section
-				.container.homepage
+				.container.homepage#questionnaire
 					h2 WHICH HOUSEPLANT SUITS YOU BEST?
 					br
 					p
@@ -117,15 +119,21 @@ html(lang='en')
 							.menu-item
 								p.text-muted
 									ul#nav
+										a(href='/') Home
 										li
-											a(href='/') Home
+											a(href='/' + '#questionnaire') Questionnaire
 										li
-											a(href='/#') About Us
+											a(href='/' + '#howdoesitwork') How Does it Work?
 										li
-											a(href='/#') Contact
+											a(href='/' + '#aboutus') About Us
 										li
-											a(href='/#') Log In / Sign Up
-										p
+											a(href='/' + '#contact') Contact
+										//-li
+											a(href='#') Log in / Sign Up
+				.row
+					.menu-item
+						p made with love by Maatje van der Veer
+						p illustrations by Elzeline Kooy
 
 		script(src='./js/jquery-3.1.1.js')
 		script(src='./js/bootstrap.min.js')
