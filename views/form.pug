@@ -66,23 +66,28 @@ html(lang='en')
 						h2.fs-title LICHT
 						h3.fs-subtitle hoeveel licht krijgt de plant?
 						|
-						input(type='text', name='email', placeholder='Email')
+						input(type='radio', name='question1', value="A")
+						label(for='question1') Ik leef op kunstmatig licht
 						|
-						input(type='password', name='pass', placeholder='Password')
+						input(type='radio', name='question1', value="B") 
+						label(for='question2') Halfschaduw, halfzon
 						|
-						input(type='password', name='cpass', placeholder='Confirm Password')
+						input(type='radio', name='question1', value="C")
+						label(for='question1') Volop zon de hele dag door
 						|
+						br
 						input.next.action-button(type='button', name='next', value='Next')
 					fieldset
 						h2.fs-title GROENE VINGERS
 						h3.fs-subtitle hoe groen zijn jouw vingers?
 						|
-						input(type='text', name='twitter', placeholder='Twitter')
+						input(type='radio', name='question2', value="true")
+						label(for='question1') Rob Verlinden is er niks bij
 						|
-						input(type='text', name='facebook', placeholder='Facebook')
+						input(type='radio', name='question2', value="false") 
+						label(for='question2') Zo groen als mijn laatste dode plant
 						|
-						input(type='text', name='gplus', placeholder='Google Plus')
-						|
+						br
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
 						input.next.action-button(type='button', name='next', value='Next')
@@ -90,40 +95,38 @@ html(lang='en')
 						h2.fs-title HUISMUS vs EXPAT
 						h3.fs-subtitle ben je vaak weg?
 						|
-						input(type='text', name='fname', placeholder='First Name')
+						input(type='radio', name='question3', value="true")
+						label(for='question1') Ja: home is where the heart is, duh
 						|
-						input(type='text', name='lname', placeholder='Last Name')
+						input(type='radio', name='question3', value="false") 
+						label(for='question2') Nee: Oost west, thuis best
 						|
-						input(type='text', name='phone', placeholder='Phone')
-						textarea(name='address', placeholder='Address')
-						|
+						br
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
-						input.submit.action-button(type='submit', name='submit', value='Submit')
+						input.next.action-button(type='button', name='next', value='Next')
 					fieldset
 						h2.fs-title VOCHT
 						h3.fs-subtitle is de ruimte relatief vochtig?
 						|
-						input(type='text', name='fname', placeholder='First Name')
+						input(type='radio', name='question4', value="true")
+						label(for='question1') Best wel
 						|
-						input(type='text', name='lname', placeholder='Last Name')
-						|
-						input(type='text', name='phone', placeholder='Phone')
-						textarea(name='address', placeholder='Address')
+						input(type='radio', name='question4', value="false") 
+						label(for='question2') Valt mee
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
 						input.submit.action-button(type='submit', name='submit', value='Submit')
 					fieldset
 						h2.fs-title RUIMTE
-						h3.fs-subtitle hoeveel ruimte wil je de plant geven?
+						h3.fs-subtitle hoeveel ruimte heb je voor de plant?
 						|
-						input(type='text', name='fname', placeholder='First Name')
+						input(type='radio', name='question5', value="true")
+						label(for='question1') Weinig: hoe kleiner de plant, hoe beter
 						|
-						input(type='text', name='lname', placeholder='Last Name')
-						|
-						input(type='text', name='phone', placeholder='Phone')
-						textarea(name='address', placeholder='Address')
+						input(type='radio', name='question5', value="false") 
+						label(for='question2') Veel: hoe groter de plant, hoe beter
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
@@ -132,12 +135,11 @@ html(lang='en')
 						h2.fs-title DESIGN
 						h3.fs-subtitle Wat is je smaak?
 						|
-						input(type='text', name='fname', placeholder='First Name')
+						input(type='radio', name='question6', value="true")
+						label(for='question1') Modern &amp; minimalistisch
 						|
-						input(type='text', name='lname', placeholder='Last Name')
-						|
-						input(type='text', name='phone', placeholder='Phone')
-						textarea(name='address', placeholder='Address')
+						input(type='radio', name='question6', value="false") 
+						label(for='question2') Druk &amp; vintage
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
@@ -146,12 +148,11 @@ html(lang='en')
 						h2.fs-title LIEFDE
 						h3.fs-subtitle hoeveel zorg en liefde krijgen je planten?
 						|
-						input(type='text', name='fname', placeholder='First Name')
+						input(type='radio', name='question7', value="true")
+						label(for='question1') Ze zien daglicht, daar is ook alles mee gezegd
 						|
-						input(type='text', name='lname', placeholder='Last Name')
-						|
-						input(type='text', name='phone', placeholder='Phone')
-						textarea(name='address', placeholder='Address')
+						input(type='radio', name='question7', value="false") 
+						label(for='question2') Ze krijgen een naam, en ik praat met ze
 						|
 						input.previous.action-button(type='button', name='previous', value='Previous')
 						|
