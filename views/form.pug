@@ -46,7 +46,7 @@ html(lang='en')
 							li.active
 								a(href='/') Home
 							li
-								a(href='/' + '#questionnaire') Questionnaire
+								a(href='/' + 'form') Questionnaire
 							li
 								a(href='/' + '#howdoesitwork') How Does it Work?
 							li
@@ -66,15 +66,15 @@ html(lang='en')
 							h3 Hoeveel licht krijgt de plant?
 							br
 							label
-								input(id='qq1' type='radio', name='a1', value="1") 
+								input(id='qq1' type='radio', name='q1', value="1") 
 								i Ik leef op kunstmatig licht
 							br
 							label
-								input(type='radio', name='a2', value="2") 
+								input(type='radio', name='q1', value="2") 
 								i Halfschaduw, halfzon
 							br
 							label
-								input(type='radio', name='a3', value="3") 
+								input(type='radio', name='q1', value="3") 
 								i Volop zon de hele dag door
 							br 
 							input#next_btn1(onclick='next_step1()', type='button', value='Next')
@@ -83,11 +83,11 @@ html(lang='en')
 							h3 Wel eens een plant om zeep geholpen?
 							br
 							label
-								input(type='radio', name='a4', value="true")
+								input(type='radio', name='q2', value="true")
 								i Ja
 							br
 							label
-								input(type='radio', name='a5', value="false") 
+								input(type='radio', name='q2', value="false") 
 								i Nee
 							br
 							input#pre_btn1(onclick='prev_step1()', type='button', value='Previous')
@@ -97,11 +97,11 @@ html(lang='en')
 							h3 hoeveel zorg en liefde krijgen je planten?
 							br
 							label
-								input(type='radio', name='a6', value="true")
+								input(type='radio', name='q3', value="true")
 								i Ze zien daglicht, daar is ook alles mee gezegd
 							br
 							label
-								input(type='radio', name='a7', value="false") 
+								input(type='radio', name='q3', value="false") 
 								i Ze krijgen een naam, en ik praat met ze
 							br
 							input#pre_btn2(onclick='prev_step2()', type='button', value='Previous')
@@ -111,11 +111,11 @@ html(lang='en')
 							p Ben je vaak weg?
 							br 
 							label
-								input(type='radio', name='a8', value="true")
+								input(type='radio', name='q4', value="true")
 								i Ja
 							br
 							label
-								input(type='radio', name='a9', value="false") 
+								input(type='radio', name='q4', value="false") 
 								i Nee
 							br 
 							input#pre_btn2(onclick='prev_step3()', type='button', value='Previous')
@@ -125,11 +125,11 @@ html(lang='en')
 							h3 is de ruimte relatief vochtig?
 							br
 							label
-								input(type='radio', name='a10', value="true")
+								input(type='radio', name='q5', value="true")
 								i Best wel
 							br
 							label
-								input(type='radio', name='a11', value="false") 
+								input(type='radio', name='q5', value="false") 
 								i Valt mee
 							br
 							input#pre_btn2(onclick='prev_step4()', type='button', value='Previous')
@@ -139,11 +139,11 @@ html(lang='en')
 							h3 hoeveel ruimte heb je voor de plant?
 							br
 							label
-								input(type='radio', name='a12', value="true")
+								input(type='radio', name='q6', value="true")
 								i Weinig: hoe kleiner de plant, hoe beter
 							br
 							label
-								input(type='radio', name='a13', value="false") 
+								input(type='radio', name='q6', value="false") 
 								i Veel: hoe groter de plant, hoe beter
 							br
 							input#pre_btn2(onclick='prev_step5()', type='button', value='Previous')
@@ -153,11 +153,11 @@ html(lang='en')
 							h3 heeft je huis hoge plafonds?
 							br
 							label
-								input(type='radio', name='a14', value="true")
+								input(type='radio', name='q7', value="true")
 								i Ja
 							br
 							label
-								input(type='radio', name='a15', value="false") 
+								input(type='radio', name='q7', value="false") 
 								i Nee
 							br
 							input#pre_btn2(onclick='prev_step6()', type='button', value='Previous')
@@ -167,11 +167,11 @@ html(lang='en')
 							p Hoe groen zijn jouw vingers?
 							br
 							label
-								input(type='radio', name='a16', value="true")
+								input(type='radio', name='q8', value="true")
 								i Rob Verlinden is er niks bij
 							br
 							label
-								input(type='radio', name='a17', value="false") 
+								input(type='radio', name='q8', value="false") 
 								i Zo groen als mijn laatste dode plant
 							br 
 							input#pre_btn1(onclick='prev_step7()', type='button', value='Previous')
@@ -181,11 +181,11 @@ html(lang='en')
 							p Waar gaat je voorkeur naar uit?
 							br
 							label
-								input(type='radio', name='a18', value="true")
+								input(type='radio', name='q9', value="true")
 								i Als het maar groen is
 							br
 							label
-								input(type='radio', name='a19', value="false") 
+								input(type='radio', name='q9', value="false") 
 								i Iets eetbaars graag
 							br 
 							input#pre_btn1(onclick='prev_step8()', type='button', value='Previous')
@@ -195,11 +195,11 @@ html(lang='en')
 							h3 Wat is je smaak?
 							br
 							label
-								input(type='radio', name='a20', value="true")
+								input(type='radio', name='q10', value="true")
 								i Modern &amp; minimalistisch
 							br
 							label
-								input(type='radio', name='a21', value="false") 
+								input(type='radio', name='q10', value="false") 
 								i Druk &amp; vintage
 							br
 							input#pre_btn2(onclick='prev_step9()', type='button', value='Previous') 
@@ -209,67 +209,67 @@ html(lang='en')
 							h2 
 								strong ZZ PLANT
 							br
-							h4 Groen, mooi en vrijwel niet kapot te krijgen zo cool: Zamioculcas is boven alles een sterk staaltje natuur. Deze groene persoonlijkheid heeft stevige, opvallend regelmatige leerachtige bladeren. Ze groeien zo aan de takken dat die een beetje op gestileerde veren lijken. Ondanks de stevige stengels valt Zamioculcas toch onder de kruidachtige planten. Zijn uithoudingsvermogen zit niet zozeer in hout en dikker of zwaarder worden, maar in zijn speciale vaten die vocht en voeding opslaan. Dat maakt het één van de makkelijkste woonplanten ooit. Licht, donker, water vergeten te geven – Zamioculcas blijft er stoïcijns onder en blijft intussen trouwhartig groen en mooi zonder zelfs maar te ruien.
+							p Groen, mooi en vrijwel niet kapot te krijgen zo cool: Zamioculcas is boven alles een sterk staaltje natuur. Deze groene persoonlijkheid heeft stevige, opvallend regelmatige leerachtige bladeren. Ze groeien zo aan de takken dat die een beetje op gestileerde veren lijken. Ondanks de stevige stengels valt Zamioculcas toch onder de kruidachtige planten. Zijn uithoudingsvermogen zit niet zozeer in hout en dikker of zwaarder worden, maar in zijn speciale vaten die vocht en voeding opslaan. Dat maakt het één van de makkelijkste woonplanten ooit. Licht, donker, water vergeten te geven – Zamioculcas blijft er stoïcijns onder en blijft intussen trouwhartig groen en mooi zonder zelfs maar te ruien.
 						fieldset#plant2
 							h2 
 								strong LEPELPLANT
 							br
-							h4 Met haar groene, glimmende bladeren, roomwitte aar en spitse schutblad heeft de Lepelplant haar looks mee. Maar vergis je niet, deze woonplant is niet alleen mooi van buiten. Ze werkt namelijk hard aan het zuiveren van de lucht om haar heen, en daar profiteer jij ook van. Want je voelt je lekkerder en productiever in de schone lucht die de Lepelplant voor je regelt. Haal dus nog eens extra diep adem en fluister een lief bedankje tegen haar bladeren.
+							p Met haar groene, glimmende bladeren, roomwitte aar en spitse schutblad heeft de Lepelplant haar looks mee. Maar vergis je niet, deze woonplant is niet alleen mooi van buiten. Ze werkt namelijk hard aan het zuiveren van de lucht om haar heen, en daar profiteer jij ook van. Want je voelt je lekkerder en productiever in de schone lucht die de Lepelplant voor je regelt. Haal dus nog eens extra diep adem en fluister een lief bedankje tegen haar bladeren.
 						fieldset#plant3
 							h2 
 								strong VARENS
 							br
-							h4 Heb je regelmatig hoofdpijn of een droge huid, dan kan het zomaar zo zijn dat je niet naar de apotheek moet, maar naar het tuincentrum. De krulvaren (Nephrolepis) zuivert namelijk de lucht en zorgt voor een perfecte luchtvochtigheid. De Phlebodium en Asplenium werken ook hard aan een schone lucht voor je. Varens komen oorspronkelijk uit (sub)tropische streken en voelen zich daardoor thuis in een omgeving met een hoge luchtvochtigheid. 
+							p Heb je regelmatig hoofdpijn of een droge huid, dan kan het zomaar zo zijn dat je niet naar de apotheek moet, maar naar het tuincentrum. De krulvaren (Nephrolepis) zuivert namelijk de lucht en zorgt voor een perfecte luchtvochtigheid. De Phlebodium en Asplenium werken ook hard aan een schone lucht voor je. Varens komen oorspronkelijk uit (sub)tropische streken en voelen zich daardoor thuis in een omgeving met een hoge luchtvochtigheid. 
 						fieldset#plant4
 							h2 
 								strong KRULVAREN
 							br
-							h4 Als een yogaoefening in slow motion ontrolt het blad van de krulvaren zich tot een lange groene veer die al even kalm je huis net even beter maakt. 
+							p Als een yogaoefening in slow motion ontrolt het blad van de krulvaren zich tot een lange groene veer die al even kalm je huis net even beter maakt. 
 							h4 Krulvaren (officieel Nephrolepis) is een volle, bossige plant met enkele of meervoudige geveerde bladeren. Die groeien eigenwijs alle kanten op, zodat deze groene powerplant graag een beetje ruim staat of hangt om zich optimaal te kunnen ontwikkelen. Nieuwe scheuten en luchtwortels geven hem een heel natuurlijke junglelook. Goed verzorgd kan krulvaren jaren mee en al die tijd doet hij ook wat voor jou: het is een plant met luchtzuiverende eigenschappen, die helpt de lucht in huis te reinigen. Omdat krulvaren van een vochtige omgeving houdt, is het een ideale plant voor in de badkamer, ook omdat je hem daar makkelijk even onder de douche zet.  
 						fieldset#plant5
 							h2 
 								strong VETPLANT
 							br
-							h4 Vetplanten zijn gemakkelijk te onderhouden en in veel verschillende soorten verkrijgbaar. Heb jij een vetplantje in huis of op kantoor staan? Wij geven tips voor de verzorging:
-							h4 De familie van de vetkruidgewassen (Crassulaceae) bestaat uit ongeveer 1500 soorten. Heel veel vetplanten vinden het fijn om binnen te staan; droge lucht, zon en warmte verdragen ze goed. Zet ze op een zonnige plaats, maar niet direct in het zonlicht.
+							p Vetplanten zijn gemakkelijk te onderhouden en in veel verschillende soorten verkrijgbaar. Heb jij een vetplantje in huis of op kantoor staan? Wij geven tips voor de verzorging:
+							p De familie van de vetkruidgewassen (Crassulaceae) bestaat uit ongeveer 1500 soorten. Heel veel vetplanten vinden het fijn om binnen te staan; droge lucht, zon en warmte verdragen ze goed. Zet ze op een zonnige plaats, maar niet direct in het zonlicht.
 						fieldset#plant6
 							h2 
 								strong GRASLELIE
 							br
-							h4 De makkelijkste luchtverfrisser ooit!
-							h4 Deze clean green plant machine zorgt dat jouw longen lekker schoon en fris blijven. En daar vraagt hij heel weinig voor terug. De graslelie (Chlorophytum comosum) is een van de makkelijkst in leven te houden planten. Dus al heb je paarse, blauwe of gele vingers, je kunt het aan. Het liefst wil hij zo’n twee keer per week een slokje water. Maar vergeet je hem een poosje, dan ziet hij dat door zijn groene vingers en zuivert zonder morren door. Vandaar dat hij ook op veel kantoren te vinden is. 
+							p De makkelijkste luchtverfrisser ooit!
+							p Deze clean green plant machine zorgt dat jouw longen lekker schoon en fris blijven. En daar vraagt hij heel weinig voor terug. De graslelie (Chlorophytum comosum) is een van de makkelijkst in leven te houden planten. Dus al heb je paarse, blauwe of gele vingers, je kunt het aan. Het liefst wil hij zo’n twee keer per week een slokje water. Maar vergeet je hem een poosje, dan ziet hij dat door zijn groene vingers en zuivert zonder morren door. Vandaar dat hij ook op veel kantoren te vinden is. 
 						fieldset#plant7
 							h2 
 								strong VROUWENTONG
 							br
-							h4 Terwijl jij aan het genieten bent van de prachtige decoratieve plant, werkt ze zelf heel hard. De vrouwentong (sanseveria) zet alles op alles om de luchtvochtigheid in je huis op orde te krijgen, zodat ook je huid, ogen en luchtwegen van de plant kunnen genieten. Ze zet giftige stofjes namelijk om in zuurstof. En dan is ze ook nog eens ijzersterk en makkelijk. De woestijnplant heeft zich met gemak aangepast aan het leven in een woonkamer. 
+							p Terwijl jij aan het genieten bent van de prachtige decoratieve plant, werkt ze zelf heel hard. De vrouwentong (sanseveria) zet alles op alles om de luchtvochtigheid in je huis op orde te krijgen, zodat ook je huid, ogen en luchtwegen van de plant kunnen genieten. Ze zet giftige stofjes namelijk om in zuurstof. En dan is ze ook nog eens ijzersterk en makkelijk. De woestijnplant heeft zich met gemak aangepast aan het leven in een woonkamer. 
 							h4 Vind je het niet erg om een beetje keuze te hebben? Gelukkig, want er zijn ongeveer 70 verschillende soorten vrouwentongen. Kenmerkend is de grijsgroene kleur met strepen, vlekken en gele randen. Wil je de plant iets donkerder? Zet haar dan verder van het raam af. Lichter? Zet haar dan dichter bij het raam.
 						fieldset#plant8
 							h2 
 								strong BOSTON VARENS
 							br
-							h4 Als een yogaoefening in slow motion ontrolt het blad van de krulvaren zich tot een lange groene veer die al even kalm je huis net even beter maakt. 
-							h4 Krulvaren (officieel Nephrolepis) is een volle, bossige plant met enkele of meervoudige geveerde bladeren. Die groeien eigenwijs alle kanten op, zodat deze groene powerplant graag een beetje ruim staat of hangt om zich optimaal te kunnen ontwikkelen. Nieuwe scheuten en luchtwortels geven hem een heel natuurlijke junglelook. Goed verzorgd kan krulvaren jaren mee en al die tijd doet hij ook wat voor jou: het is een plant met luchtzuiverende eigenschappen, die helpt de lucht in huis te reinigen. Omdat krulvaren van een vochtige omgeving houdt, is het een ideale plant voor in de badkamer, ook omdat je hem daar makkelijk even onder de douche zet. 
+							p Als een yogaoefening in slow motion ontrolt het blad van de krulvaren zich tot een lange groene veer die al even kalm je huis net even beter maakt. 
+							p Krulvaren (officieel Nephrolepis) is een volle, bossige plant met enkele of meervoudige geveerde bladeren. Die groeien eigenwijs alle kanten op, zodat deze groene powerplant graag een beetje ruim staat of hangt om zich optimaal te kunnen ontwikkelen. Nieuwe scheuten en luchtwortels geven hem een heel natuurlijke junglelook. Goed verzorgd kan krulvaren jaren mee en al die tijd doet hij ook wat voor jou: het is een plant met luchtzuiverende eigenschappen, die helpt de lucht in huis te reinigen. Omdat krulvaren van een vochtige omgeving houdt, is het een ideale plant voor in de badkamer, ook omdat je hem daar makkelijk even onder de douche zet. 
 						fieldset#plant9
 							h2 
 								strong CACTUS
 							br
-							h4 Geen plant zo decoratief en surrealistisch als cactus. Uit een grijsgroene basis kan een knalroze bol groeien en tussen de stekels kunnen schitterende bloemen verschijnen. Mammillaria zijn bloeiende cactussen, Echino is bolvorming met prachtige gelijkmatige ribbels. Gymnocalycium lijkt te zijn opgebouwd uit groene kogels en heeft een trechterbloem, Opuntia groeit in vlakke schijven. En Cereus groeit als een zuil die in het wild wel tien meter kan worden.
+							p Geen plant zo decoratief en surrealistisch als cactus. Uit een grijsgroene basis kan een knalroze bol groeien en tussen de stekels kunnen schitterende bloemen verschijnen. Mammillaria zijn bloeiende cactussen, Echino is bolvorming met prachtige gelijkmatige ribbels. Gymnocalycium lijkt te zijn opgebouwd uit groene kogels en heeft een trechterbloem, Opuntia groeit in vlakke schijven. En Cereus groeit als een zuil die in het wild wel tien meter kan worden.
 
 							h4 Verder is de plant prettig zelfredzaam. Cactussen hebben een groot wortelstelsel waarmee ze vocht opslaan in hun wortels, bladeren en stengels en zo zelf grotendeels hun voeding reguleren.
 						fieldset#plant10
 							h2 
 								strong KRUIDEN
 							br
-							h4 Sommige planten zijn niet alleen mooi om naar te kijken, maar zijn ook nog eens zeer goed te gebruiken in de keuken. Kruidenplanten worden als smaakmaker gebruikt bij diverse gerechten en in soepen en sauzen. Denk aan bekende kruiden als basilicum, rozemarijn en tijm. 
+							p Sommige planten zijn niet alleen mooi om naar te kijken, maar zijn ook nog eens zeer goed te gebruiken in de keuken. Kruidenplanten worden als smaakmaker gebruikt bij diverse gerechten en in soepen en sauzen. Denk aan bekende kruiden als basilicum, rozemarijn en tijm. 
 
 							h4 Eet smakelijk!
 						fieldset#plant11
 							h2 
 								strong BANANENPLANT
 							br
-							h4 Voor een flinke tropische touch in huis is een bananenplant een must. Of een bananenboom, dwergbanaan of Musa… noem hem hoe je wilt. Deze uit de familie Musaceae afkomstige exoot heeft stoere bladeren en is van alle markten thuis. Ben je decoratief op hem uitgekeken - bijna onmogelijk  - dan gebruik je de bladeren als dakbedekking, haal je textiel uit de schijnstam of maak je je eten klaar in de bladeren. Dorstig geworden van al het genieten? Maak dan net als de Oost-Afrikanen een flink glas bananenbier of –wijn*.
-							h4 De bananenplant wordt vaak bananenboom genoemd, omdat hij een schijnstam heeft. Vanuit het middelpunt wordt steeds een nieuw bladerendek omhooggeduwd, vervolgens ontvouwt het zich. De schijnstam van de Musa ingens kan een omvang van maar liefst drie meter krijgen.
+							p Voor een flinke tropische touch in huis is een bananenplant een must. Of een bananenboom, dwergbanaan of Musa… noem hem hoe je wilt. Deze uit de familie Musaceae afkomstige exoot heeft stoere bladeren en is van alle markten thuis. Ben je decoratief op hem uitgekeken - bijna onmogelijk  - dan gebruik je de bladeren als dakbedekking, haal je textiel uit de schijnstam of maak je je eten klaar in de bladeren. Dorstig geworden van al het genieten? Maak dan net als de Oost-Afrikanen een flink glas bananenbier of –wijn*.
+							p De bananenplant wordt vaak bananenboom genoemd, omdat hij een schijnstam heeft. Vanuit het middelpunt wordt steeds een nieuw bladerendek omhooggeduwd, vervolgens ontvouwt het zich. De schijnstam van de Musa ingens kan een omvang van maar liefst drie meter krijgen.
 
 							//-input.submit_btn(onclick='validation(event)', type='submit', value='Submit')
 

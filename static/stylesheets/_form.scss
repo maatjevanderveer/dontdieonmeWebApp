@@ -4,15 +4,17 @@
 
 html {
 	height: 100%;
+	width: 100%;
 };
 
-.full.img-3 {
+section.full.img-3 {
 	background: url(../img/EK_4.jpg) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 	height: 100%;
+	width: 100%;
 }
 
 //FORM
@@ -26,23 +28,13 @@ html {
 	position: relative;
 }
 
-#progressbar {
-	margin:0;
-	padding:0;
-	font-size:18px;
-}
-
-#active1 {
-	color: $logo-green;
-}
-
 fieldset {
 	background: $whitish;
 	display:none;
 	width:500px;
 	padding:20px;
 	margin-top:50px;
-	margin-left:250px;
+	margin-left:25%;
 	border-radius:5px;
 	box-shadow:3px 3px 25px 1px $whitish;
 	position: relative;
@@ -67,20 +59,22 @@ input[type=submit],input[type=button] {
 	font-family:$p-font-family;
 }
 
-fieldset {
-	h2, p {
-	text-align:center;
-	font-family:$p-font-family;
+form {
+	i {
+		font-size: 16px;
 	}
 }
 
-ul#progressbar {
-	li {
-	margin-right:52px;
-	display:inline;
-	color: $whitish;
-	font-family: $p-font-family;
+.plants fieldset {
+	width: 800px;
+	border: 25px solid $logo-green;
+	text-align: center;
+	margin-left:15%;
+	h2 {
+		font-family: $heading-font-family;
+	}
+	p {
+		font-family: $p-font-family;
+		font-size: 14px;
 	}
 }
-
-

@@ -1,11 +1,11 @@
 
 console.log('ready')
 function next_step1() {
-	var value1 = $('input[name=a1]:checked').val();
+	var value1 = $('input[value=1]:checked').val();
 	
-	var value2 = $('input[name=a2]:checked').val();
+	var value2 = $('input[value=2]:checked').val();
 	
-	var value3 = $('input[name=a3]:checked').val();
+	var value3 = $('input[value=3]:checked').val();
 	
 	if(value1) {
 		$('#q1').hide()
@@ -23,9 +23,9 @@ function next_step1() {
 }
 
 function next_step2() {
-	var value1 = $('input[name=a4]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a5]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q2').hide()
@@ -38,9 +38,9 @@ function next_step2() {
 }
 
 function next_step3() {
-	var value1 = $('input[name=a6]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a7]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q3').hide()
@@ -53,9 +53,9 @@ function next_step3() {
 }
 
 function next_step4() {
-	var value1 = $('input[name=a8]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a9]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q4').hide()
@@ -68,9 +68,9 @@ function next_step4() {
 }
 
 function next_step5() {
-	var value1 = $('input[name=a10]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a11]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q5').hide()
@@ -83,9 +83,9 @@ function next_step5() {
 }
 
 function next_step6() {
-	var value1 = $('input[name=a12]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a13]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q6').hide()
@@ -98,9 +98,9 @@ function next_step6() {
 }
 
 function next_step7() {
-	var value1 = $('input[name=a12]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a13]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q7').hide()
@@ -113,9 +113,9 @@ function next_step7() {
 }
 
 function next_step10() {
-	var value1 = $('input[name=a20]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a21]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q10').hide()
@@ -128,9 +128,9 @@ function next_step10() {
 }
 
 function next_step8() {
-	var value1 = $('input[name=a16]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a17]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q8').hide()
@@ -143,9 +143,9 @@ function next_step8() {
 }
 
 function next_step9() {
-	var value1 = $('input[name=a18]:checked').val();
+	var value1 = $('input[value=true]:checked').val();
 	
-	var value2 = $('input[name=a19]:checked').val();
+	var value2 = $('input[value=false]:checked').val();
 	
 	if(value1) {
 		$('#q9').hide()
