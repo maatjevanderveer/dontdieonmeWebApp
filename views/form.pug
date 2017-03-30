@@ -152,13 +152,14 @@ html(lang='en')
 							h2 PLAFOND
 							h3 heeft je huis hoge plafonds?
 							br
-							label
-								input(type='radio', name='q7', value="true")
-								i Ja
-							br
-							label
-								input(type='radio', name='q7', value="false") 
-								i Nee
+							.options
+								label
+									input(type='radio', name='q7', value="true")
+									i Ja
+								br
+								label
+									input(type='radio', name='q7', value="false") 
+									i Nee
 							br
 							input#pre_btn2(onclick='prev_step6()', type='button', value='Previous')
 							input#next_btn2(name='next', onclick='next_step7()', type='button', value='Next')
@@ -180,6 +181,7 @@ html(lang='en')
 							h2 EETBAAR
 							p Waar gaat je voorkeur naar uit?
 							br
+							options
 							label
 								input(type='radio', name='q9', value="true")
 								i Als het maar groen is
@@ -225,25 +227,28 @@ html(lang='en')
 								strong KRULVAREN
 							br
 							p Als een yogaoefening in slow motion ontrolt het blad van de krulvaren zich tot een lange groene veer die al even kalm je huis net even beter maakt. 
-							h4 Krulvaren (officieel Nephrolepis) is een volle, bossige plant met enkele of meervoudige geveerde bladeren. Die groeien eigenwijs alle kanten op, zodat deze groene powerplant graag een beetje ruim staat of hangt om zich optimaal te kunnen ontwikkelen. Nieuwe scheuten en luchtwortels geven hem een heel natuurlijke junglelook. Goed verzorgd kan krulvaren jaren mee en al die tijd doet hij ook wat voor jou: het is een plant met luchtzuiverende eigenschappen, die helpt de lucht in huis te reinigen. Omdat krulvaren van een vochtige omgeving houdt, is het een ideale plant voor in de badkamer, ook omdat je hem daar makkelijk even onder de douche zet.  
+							br
+							p Krulvaren (officieel Nephrolepis) is een volle, bossige plant met enkele of meervoudige geveerde bladeren. Die groeien eigenwijs alle kanten op, zodat deze groene powerplant graag een beetje ruim staat of hangt om zich optimaal te kunnen ontwikkelen. Nieuwe scheuten en luchtwortels geven hem een heel natuurlijke junglelook. Goed verzorgd kan krulvaren jaren mee en al die tijd doet hij ook wat voor jou: het is een plant met luchtzuiverende eigenschappen, die helpt de lucht in huis te reinigen. Omdat krulvaren van een vochtige omgeving houdt, is het een ideale plant voor in de badkamer, ook omdat je hem daar makkelijk even onder de douche zet.  
 						fieldset#plant5
 							h2 
 								strong VETPLANT
 							br
 							p Vetplanten zijn gemakkelijk te onderhouden en in veel verschillende soorten verkrijgbaar. Heb jij een vetplantje in huis of op kantoor staan? Wij geven tips voor de verzorging:
+							br
 							p De familie van de vetkruidgewassen (Crassulaceae) bestaat uit ongeveer 1500 soorten. Heel veel vetplanten vinden het fijn om binnen te staan; droge lucht, zon en warmte verdragen ze goed. Zet ze op een zonnige plaats, maar niet direct in het zonlicht.
 						fieldset#plant6
 							h2 
 								strong GRASLELIE
 							br
 							p De makkelijkste luchtverfrisser ooit!
+							br
 							p Deze clean green plant machine zorgt dat jouw longen lekker schoon en fris blijven. En daar vraagt hij heel weinig voor terug. De graslelie (Chlorophytum comosum) is een van de makkelijkst in leven te houden planten. Dus al heb je paarse, blauwe of gele vingers, je kunt het aan. Het liefst wil hij zo’n twee keer per week een slokje water. Maar vergeet je hem een poosje, dan ziet hij dat door zijn groene vingers en zuivert zonder morren door. Vandaar dat hij ook op veel kantoren te vinden is. 
 						fieldset#plant7
 							h2 
 								strong VROUWENTONG
 							br
 							p Terwijl jij aan het genieten bent van de prachtige decoratieve plant, werkt ze zelf heel hard. De vrouwentong (sanseveria) zet alles op alles om de luchtvochtigheid in je huis op orde te krijgen, zodat ook je huid, ogen en luchtwegen van de plant kunnen genieten. Ze zet giftige stofjes namelijk om in zuurstof. En dan is ze ook nog eens ijzersterk en makkelijk. De woestijnplant heeft zich met gemak aangepast aan het leven in een woonkamer. 
-							h4 Vind je het niet erg om een beetje keuze te hebben? Gelukkig, want er zijn ongeveer 70 verschillende soorten vrouwentongen. Kenmerkend is de grijsgroene kleur met strepen, vlekken en gele randen. Wil je de plant iets donkerder? Zet haar dan verder van het raam af. Lichter? Zet haar dan dichter bij het raam.
+							p Vind je het niet erg om een beetje keuze te hebben? Gelukkig, want er zijn ongeveer 70 verschillende soorten vrouwentongen. Kenmerkend is de grijsgroene kleur met strepen, vlekken en gele randen. Wil je de plant iets donkerder? Zet haar dan verder van het raam af. Lichter? Zet haar dan dichter bij het raam.
 						fieldset#plant8
 							h2 
 								strong BOSTON VARENS
@@ -255,8 +260,8 @@ html(lang='en')
 								strong CACTUS
 							br
 							p Geen plant zo decoratief en surrealistisch als cactus. Uit een grijsgroene basis kan een knalroze bol groeien en tussen de stekels kunnen schitterende bloemen verschijnen. Mammillaria zijn bloeiende cactussen, Echino is bolvorming met prachtige gelijkmatige ribbels. Gymnocalycium lijkt te zijn opgebouwd uit groene kogels en heeft een trechterbloem, Opuntia groeit in vlakke schijven. En Cereus groeit als een zuil die in het wild wel tien meter kan worden.
-
-							h4 Verder is de plant prettig zelfredzaam. Cactussen hebben een groot wortelstelsel waarmee ze vocht opslaan in hun wortels, bladeren en stengels en zo zelf grotendeels hun voeding reguleren.
+							br
+							p Verder is de plant prettig zelfredzaam. Cactussen hebben een groot wortelstelsel waarmee ze vocht opslaan in hun wortels, bladeren en stengels en zo zelf grotendeels hun voeding reguleren.
 						fieldset#plant10
 							h2 
 								strong KRUIDEN
@@ -269,6 +274,7 @@ html(lang='en')
 								strong BANANENPLANT
 							br
 							p Voor een flinke tropische touch in huis is een bananenplant een must. Of een bananenboom, dwergbanaan of Musa… noem hem hoe je wilt. Deze uit de familie Musaceae afkomstige exoot heeft stoere bladeren en is van alle markten thuis. Ben je decoratief op hem uitgekeken - bijna onmogelijk  - dan gebruik je de bladeren als dakbedekking, haal je textiel uit de schijnstam of maak je je eten klaar in de bladeren. Dorstig geworden van al het genieten? Maak dan net als de Oost-Afrikanen een flink glas bananenbier of –wijn*.
+							br
 							p De bananenplant wordt vaak bananenboom genoemd, omdat hij een schijnstam heeft. Vanuit het middelpunt wordt steeds een nieuw bladerendek omhooggeduwd, vervolgens ontvouwt het zich. De schijnstam van de Musa ingens kan een omvang van maar liefst drie meter krijgen.
 
 							//-input.submit_btn(onclick='validation(event)', type='submit', value='Submit')

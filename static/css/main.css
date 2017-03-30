@@ -6029,7 +6029,8 @@ form i {
   width: 800px;
   border: 25px solid #56d9b7;
   text-align: center;
-  margin-left: 15%; }
+  margin-left: 15%;
+  position: relative; }
   .plants fieldset h2 {
     font-family: "Raleway", sans-serif; }
   .plants fieldset p {
