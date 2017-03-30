@@ -6,6 +6,7 @@ body {
 
 p {
 	font-family: $p-font-family;
+	font-size: 18px;
 }
 
 h1 {
@@ -205,5 +206,23 @@ span.glyphicon {
 	img {
 	display: inline-block;
 	width: 20%;
+	}
+}
+
+.plants fieldset {
+	padding: 50px;
+	border: 25px solid $logo-green;
+	h2 {
+		font-family: $heading-font-family;
+	}
+	h4 {
+		font-family: $p-font-family;
+		line-height: 110%;
+	}
+}
+
+form {
+	i {
+		font-size: 18px;
 	}
 }

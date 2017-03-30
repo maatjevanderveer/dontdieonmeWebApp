@@ -1,106 +1,204 @@
-/*------------Validation Function-----------------*/
-var count = 0; // To count blank fields.
-function validation(event) {
-var radio_check = document.getElementsByName('gender'); // Fetching radio button by name.
-var input_field = document.getElementsByClassName('text_field'); // Fetching all inputs with same class name text_field and an html tag textarea.
-var text_area = document.getElementsByTagName('textarea');
-// Validating radio button.
-if (radio_check[0].checked == false && radio_check[1].checked == false) {
-var y = 0;
-} else {
-var y = 1;
-}
-// For loop to count blank inputs.
-for (var i = input_field.length; i > count; i--) {
-if (input_field[i - 1].value == '' || text_area.value == '') {
-count = count + 1;
-} else {
-count = 0;
-}
-}
-if (count != 0 || y == 0) {
-alert("*All Fields are mandatory*"); // Notifying validation
-event.preventDefault();
-} else {
-return true;
-}
-}
-/*---------------------------------------------------------*/
-// Function that executes on click of 1st next button.
+
+console.log('ready')
 function next_step1() {
-document.getElementById("q1").style.display = "none";
-document.getElementById("q2").style.display = "block";
-document.getElementById("active2").style.color = "#56d9b7";
+	var value1 = $('input[name=a1]:checked').val();
+	
+	var value2 = $('input[name=a2]:checked').val();
+	
+	var value3 = $('input[name=a3]:checked').val();
+	
+	if(value1) {
+		$('#q1').hide()
+		$('#q2').show()
+	}
+	else if(value2){
+		$('#q1').hide()
+		$('#q4').show()
+
+	 }
+	 else {
+	 	$('#q1').hide()
+		$('#q8').show()
+	 }
 }
-// Function that executes on click of 1st previous button.
-function prev_step1() {
-document.getElementById("q1").style.display = "block";
-document.getElementById("q2").style.display = "none";
-document.getElementById("active1").style.color = "#56d9b7";
-document.getElementById("active2").style.color = "#56d9b7";
-}
-// Function that executes on click of 2nd next button.
+
 function next_step2() {
-document.getElementById("q2").style.display = "none";
-document.getElementById("q3").style.display = "block";
-document.getElementById("active3").style.color = "#56d9b7";
+	var value1 = $('input[name=a4]:checked').val();
+	
+	var value2 = $('input[name=a5]:checked').val();
+	
+	if(value1) {
+		$('#q2').hide()
+		$('#plant1').show() //SHOW RESULT: ZZ PLANT
+	}
+	 else {
+	 	$('#q2').hide()
+		$('#q3').show()
+	 }
 }
-// Function that executes on click of 2nd previous button.
-function prev_step2() {
-document.getElementById("q3").style.display = "none";
-document.getElementById("q2").style.display = "block";
-document.getElementById("active2").style.color = "#56d9b7";
-document.getElementById("active3").style.color = "#56d9b7";
-}
-// Function that executes on click of 3rd next button.
+
 function next_step3() {
-document.getElementById("q3").style.display = "none";
-document.getElementById("q4").style.display = "block";
-document.getElementById("active4").style.color = "#56d9b7";
+	var value1 = $('input[name=a6]:checked').val();
+	
+	var value2 = $('input[name=a7]:checked').val();
+	
+	if(value1) {
+		$('#q3').hide()
+		$('#plant2').show() //SHOW RESULT: LEPEL PLANT
+	}
+	 else {
+	 	$('#q3').hide()
+		$('#plant3').show() //SHOW RESULT: VARENS
+	 }
 }
-// Function that executes on click of 3rd previous button.
-function prev_step3() {
-document.getElementById("q4").style.display = "none";
-document.getElementById("q3").style.display = "block";
-document.getElementById("active3").style.color = "#56d9b7";
-document.getElementById("active4").style.color = "#56d9b7";
-}
-// Function that executes on click of 4th next button.
+
 function next_step4() {
-document.getElementById("q4").style.display = "none";
-document.getElementById("q5").style.display = "block";
-document.getElementById("active4").style.color = "#56d9b7";
+	var value1 = $('input[name=a8]:checked').val();
+	
+	var value2 = $('input[name=a9]:checked').val();
+	
+	if(value1) {
+		$('#q4').hide()
+		$('#q5').show()
+	}
+	 else {
+	 	$('#q4').hide()
+		$('#q6').show()
+	 }
 }
-// Function that executes on click of 4th previous button.
-function prev_step4() {
-document.getElementById("q5").style.display = "none";
-document.getElementById("q4").style.display = "block";
-document.getElementById("active4").style.color = "#56d9b7";
-document.getElementById("active5").style.color = "#56d9b7";
-}
-// Function that executes on click of 5th next button.
+
 function next_step5() {
-document.getElementById("q5").style.display = "none";
-document.getElementById("q6").style.display = "block";
-document.getElementById("active5").style.color = "#56d9b7";
+	var value1 = $('input[name=a10]:checked').val();
+	
+	var value2 = $('input[name=a11]:checked').val();
+	
+	if(value1) {
+		$('#q5').hide()
+		$('#plant4').show() //SHOW RESULT: ORCHIDEE
+	}
+	 else {
+	 	$('#q5').hide()
+		$('#plant5').show() // SHOW RESULT: VETPLANT
+	 }
 }
-// Function that executes on click of 5th previous button.
-function prev_step5() {
-document.getElementById("q6").style.display = "none";
-document.getElementById("q5").style.display = "block";
-document.getElementById("active5").style.color = "#56d9b7";
-document.getElementById("active6").style.color = "#56d9b7";
-}
-// Function that executes on click of 6th next button.
+
 function next_step6() {
-document.getElementById("q6").style.display = "none";
-document.getElementById("q7").style.display = "block";
-document.getElementById("active6").style.color = "#56d9b7";
+	var value1 = $('input[name=a12]:checked').val();
+	
+	var value2 = $('input[name=a13]:checked').val();
+	
+	if(value1) {
+		$('#q6').hide()
+		$('#q7').show() 
+	}
+	 else {
+	 	$('#q6').hide()
+		$('#plant11').show() // SHOW RESULT: BANANENPLANT
+	 }
 }
-// Function that executes on click of 6th previous button.
+
+function next_step7() {
+	var value1 = $('input[name=a12]:checked').val();
+	
+	var value2 = $('input[name=a13]:checked').val();
+	
+	if(value1) {
+		$('#q7').hide()
+		$('#plant6').show() // SHOW RESULT: GRASLELIE
+	}
+	 else {
+	 	$('#q7').hide()
+		$('#plant7').show() // SHOW RESULT: VROUWENTONG
+	 }
+}
+
+function next_step10() {
+	var value1 = $('input[name=a20]:checked').val();
+	
+	var value2 = $('input[name=a21]:checked').val();
+	
+	if(value1) {
+		$('#q10').hide()
+		$('#plant7').show() // SHOW RESULT: VROUWENTONG
+	}
+	 else {
+	 	$('#q10').hide()
+		$('#plant8').show() // SHOW RESULT: BOSTON VARENS
+	 }
+}
+
+function next_step8() {
+	var value1 = $('input[name=a16]:checked').val();
+	
+	var value2 = $('input[name=a17]:checked').val();
+	
+	if(value1) {
+		$('#q8').hide()
+		$('#q9').show() 
+	}
+	 else {
+	 	$('#q8').hide()
+		$('#plant9').show() // SHOW RESULT: CACTUS
+	 }
+}
+
+function next_step9() {
+	var value1 = $('input[name=a18]:checked').val();
+	
+	var value2 = $('input[name=a19]:checked').val();
+	
+	if(value1) {
+		$('#q9').hide()
+		$('#q10').show() 
+	}
+	 else {
+	 	$('#q9').hide()
+		$('#plant10').show() // SHOW RESULT: KRUIDEN
+	 }
+}
+
+function prev_step1() {
+	document.getElementById("q1").style.display = "block";
+	document.getElementById("q2").style.display = "none";
+}
+
+function prev_step2() {
+	document.getElementById("q2").style.display = "block";
+	document.getElementById("q3").style.display = "none";
+}
+
+function prev_step3() {
+	document.getElementById("q1").style.display = "block";
+	document.getElementById("q4").style.display = "none";
+}
+
+function prev_step4() {
+	document.getElementById("q4").style.display = "block";
+	document.getElementById("q5").style.display = "none";
+}
+
+function prev_step5() {
+	document.getElementById("q4").style.display = "block";
+	document.getElementById("q6").style.display = "none";
+}
+
 function prev_step6() {
-document.getElementById("q7").style.display = "none";
-document.getElementById("q6").style.display = "block";
-document.getElementById("active6").style.color = "#56d9b7";
-document.getElementById("active7").style.color = "#56d9b7";
+	document.getElementById("q6").style.display = "block";
+	document.getElementById("q7").style.display = "none";
 }
+
+function prev_step7() {
+	document.getElementById("q1").style.display = "block";
+	document.getElementById("q8").style.display = "none";
+}
+
+function prev_step8() {
+	document.getElementById("q8").style.display = "block";
+	document.getElementById("q9").style.display = "none";
+}
+
+function prev_step9() {
+	document.getElementById("q9").style.display = "block";
+	document.getElementById("q10").style.display = "none";
+}
+

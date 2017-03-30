@@ -5811,7 +5811,8 @@ body {
   font-family: "Karla", sans-serif; }
 
 p {
-  font-family: "Karla", sans-serif; }
+  font-family: "Karla", sans-serif;
+  font-size: 18px; }
 
 h1 {
   font-family: "Raleway", sans-serif;
@@ -5966,6 +5967,18 @@ span.glyphicon {
   .menu-item img {
     display: inline-block;
     width: 20%; }
+
+.plants fieldset {
+  padding: 50px;
+  border: 25px solid #56d9b7; }
+  .plants fieldset h2 {
+    font-family: "Raleway", sans-serif; }
+  .plants fieldset h4 {
+    font-family: "Karla", sans-serif;
+    line-height: 110%; }
+
+form i {
+  font-size: 18px; }
 
 /*basic reset*/
 * {
