@@ -6035,10 +6035,12 @@ form i {
 
 .plants fieldset {
   width: 800px;
-  border: 25px solid #56d9b7;
+  border: 15px solid #56d9b7;
   text-align: center;
   margin-left: 15%;
   position: relative; }
+  .plants fieldset a, .plants fieldset strong {
+    color: #d95678; }
   .plants fieldset h2 {
     font-family: "Raleway", sans-serif; }
   .plants fieldset p {

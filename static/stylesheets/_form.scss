@@ -70,10 +70,13 @@ form {
 
 .plants fieldset {
 	width: 800px;
-	border: 25px solid $logo-green;
+	border: 15px solid $logo-green;
 	text-align: center;
 	margin-left:15%;
 	position: relative;
+	a, strong {
+		color: complement($logo-green);
+	}
 	h2 {
 		font-family: $heading-font-family;
 	}
