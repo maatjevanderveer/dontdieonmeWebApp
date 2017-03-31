@@ -1,4 +1,3 @@
-
 /*basic reset*/
 * {margin: 0; padding: 0;}
 
@@ -6,6 +5,8 @@ html {
 	height: 100%;
 	width: 100%;
 };
+
+// GERERAL STYLING 
 
 section.full.img-3 {
 	background: url(../img/EK_4.jpg) no-repeat center center fixed; 
@@ -16,8 +17,6 @@ section.full.img-3 {
 	height: 100%;
 	width: 100%;
 }
-
-//FORM
 
 .main {
 	float:left;
@@ -39,6 +38,10 @@ fieldset {
 	box-shadow:3px 3px 25px 1px $whitish;
 	position: relative;
 }
+
+// END - FORM
+
+// START - FORM
 
 #q1 {
 	display:block;

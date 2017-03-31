@@ -5812,7 +5812,8 @@ body {
 
 p {
   font-family: "Karla", sans-serif;
-  font-size: 18px; }
+  font-size: 19px;
+  line-height: 200%; }
 
 h1 {
   font-family: "Raleway", sans-serif;
@@ -5910,7 +5911,7 @@ h2, h3, h4, h5 {
     margin: 10px; }
 
 .container.homepage {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.9);
   padding: 80px;
   position: relative; }
   .container.homepage h2 {
@@ -5951,6 +5952,9 @@ section.container.howdoesitwork {
   border-color: #1e1e2e;
   margin: 10px; }
 
+.container.homepage.text-center#contact p {
+  font-size: 16px; }
+
 footer.footer {
   background-color: #ffffff; }
   footer.footer ul {
@@ -5967,6 +5971,10 @@ span.glyphicon {
   .menu-item img {
     display: inline-block;
     width: 20%; }
+
+#madewith p {
+  font-size: 12px;
+  background-color: #f2f2f2; }
 
 /*basic reset*/
 * {

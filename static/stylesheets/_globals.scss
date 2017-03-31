@@ -1,3 +1,5 @@
+// START -  GENERAL STYLING
+
 body {
 	// background-color: $background-color;
 	color: $primary-color;
@@ -6,7 +8,8 @@ body {
 
 p {
 	font-family: $p-font-family;
-	font-size: 18px;
+	font-size:19px;
+	line-height: 200%;
 }
 
 h1 {
@@ -35,7 +38,10 @@ h2, h3, h4, h5 {
 	background-size: cover;
 }
 
-// NAVBAR
+// END - GENERAL STYLING
+
+// START - NAVBAR
+
 .navbar-default {
 	background-color: rgba($primary-color, 0.6);
 	border-color: transparent;
@@ -111,9 +117,9 @@ h2, h3, h4, h5 {
 	background: rgba($primary-color, 0.9); //NON-IE
 }
 
-// END NAVBAR
+// END - NAVBAR
 
-// CONTAINER
+// START - CONTAINER
 
 .container.text-center.title {
 		h1 {
@@ -130,7 +136,7 @@ h2, h3, h4, h5 {
 
 .container.homepage {
 	//background: mix(black, white, 50%);
-	background: rgba($whitish, 0.8);
+	background: rgba($whitish, 0.9);
 	padding: 80px;
 	position: relative;
 	h2 {
@@ -183,7 +189,15 @@ section.container.howdoesitwork {
 		}
 }
 
-// FOOTER
+.container.homepage.text-center#contact {
+	p {
+	font-size: 16px;
+	}
+}
+
+// END - CONTAINER
+
+// START - FOOTER
 
 footer.footer {
 	background-color: $whitish;
@@ -208,6 +222,12 @@ span.glyphicon {
 	width: 20%;
 	}
 }
+
+#madewith p {
+	font-size: 12px;
+	background-color: darken($whitish, 5%)
+}
+
 
 
 

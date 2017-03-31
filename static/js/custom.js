@@ -1,5 +1,6 @@
 
 console.log('ready')
+
 function next_step1() {
 	var value1 = $('input[value=1]:checked').val();
 	
