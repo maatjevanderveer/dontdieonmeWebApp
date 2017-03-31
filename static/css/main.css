@@ -5923,6 +5923,9 @@ h2, h3, h4, h5 {
   .container.homepage a:hover {
     color: #47476b; }
 
+#questionnaire p {
+  text-align: center; }
+
 section.container.howdoesitwork {
   background: rgba(255, 255, 255, 0.8);
   padding-top: 80px;
